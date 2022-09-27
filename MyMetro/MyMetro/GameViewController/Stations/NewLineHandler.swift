@@ -45,13 +45,14 @@ extension GameViewController // this file adds a new line
     
     @IBAction func addStation(_ sender: Any)
     {
+        exitButtonOutlet.isEnabled = false
         addStationOutlet.isHidden = true
         buttonTask = 1 // sets the button task to extend line
         addStationVisibility(x: false, phase : 1)
         stationUIVisibility(tf: true)
     }
     
-    func drawLine(colorID: UIColor, start: CGPoint, end: CGPoint)
+    func drawLine(colorID: UIColor, start: CGPoint, end: CGPoint, tunnel: Bool)
     {
         //design the path
         let path = UIBezierPath()
@@ -59,9 +60,43 @@ extension GameViewController // this file adds a new line
         path.addLine(to: end)
         //design path in layer
         let shapeLayer = CAShapeLayer()
+        if tunnel == true
+        {
+            shapeLayer.lineDashPattern = [7, 3]
+            tunnelNum -= 1
+        }
         shapeLayer.strokeColor = colorID.cgColor
         shapeLayer.path = path.cgPath
         shapeLayer.lineWidth = 8.0
         view.layer.insertSublayer(shapeLayer, at: 2)
+        exitButtonOutlet.isEnabled = true
+        buttonTask = 0
+        resourceManagementLine()
+        buildSFX()
+        
+    }
+    
+    func resourceManagementLine()
+    {
+        //money management
+        money -= 100
+        UImoneyLabel.text = String(money)
+        UItunnelLabel.text = String(tunnelNum)
+    }
+    
+    func checkForTunnel() -> Bool
+    {
+        if st1 == st2
+        {
+            return false
+        }
+        else if st1 != st2
+        {
+            return true
+        }
+        else
+        {
+            return false
+        }
     }
 }

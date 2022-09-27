@@ -58,21 +58,42 @@ extension GameViewController // GameObjectEnabilityAndVisibility
       stationUIDensityBar.isHidden = tf
       stationUICrowdDensity.isHidden = tf
   }
+    
+    func returnSTClassByID(stationID: Int) -> newStation
+    {
+        var classVar = newStation.st_central
+        var labelVar = CentralOutlet
+        switch stationID {
+        case 0: // Reset UI
+            print("ERROR: NULL(CASE 0) - NO CLASS - RETURNING ID 1")
+        case 1://Admiralty St
+            classVar = newStation.st_admiralty
+            labelVar = AdmiraltyOutlet
+        case 2:
+            classVar = newStation.st_central
+            labelVar = CentralOutlet
+        case 3:
+            classVar = newStation.st_hunghom
+            labelVar = HungHomOutlet
+        default:
+            print("ERROR: NULL(DEFAULT) - NO CLASS - RETURNING ID 1")
+        }
+        return classVar
+        
+    }
 
     func loadStation(stationID: Int) // loads a station UI detail on right
     {
         stationEnability(trueFalse: true) // all buttons are enabled, self is disabled to avoid double clicking the same button and crashing
-        switch stationID {
-        case 0: // Reset UI
+        let x = returnSTClassByID(stationID: Int(stationID))
+        if stationID == 0
+        {
             stationUIVisibility(tf: true)
-        case 1://Admiralty St
-            stationUIName.text = newStation.st_admiralty.name
-        case 2:
-            stationUIName.text = newStation.st_central.name
-        case 3:
-            stationUIName.text = newStation.st_hunghom.name
-        default:
-            stationUIVisibility(tf: false)
+        }
+        else
+        {
+            stationUIName.text = x.name
+            stationUIDensityBar.progress = Float(x.crowdedness)/10
         }
         stationUIVisibility(tf: false)
     }
@@ -85,6 +106,7 @@ extension GameViewController // GameObjectEnabilityAndVisibility
             AdmiraltyOutlet.isEnabled = tf
             CentralOutlet.isEnabled = tf
             HungHomOutlet.isEnabled = tf
+            
         case 1:
             AdmiraltyOutlet.isEnabled = tf
         case 2:
@@ -92,7 +114,7 @@ extension GameViewController // GameObjectEnabilityAndVisibility
         case 3:
             HungHomOutlet.isEnabled = tf
         default:
-            print("pass")
+            exitButtonOutlet.isEnabled = tf
         }
     }
     

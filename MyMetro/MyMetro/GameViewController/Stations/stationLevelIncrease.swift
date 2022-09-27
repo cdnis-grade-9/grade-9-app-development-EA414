@@ -17,6 +17,8 @@ extension GameViewController
         {
             HungHomImage.isHidden = false
             HungHomOutlet.isEnabled = true
+            unlockedStationsID.append(newStation.st_hunghom.id)
+            print("INFO: Added HungHom Station. Current Unlocked Stations By ID: \(unlockedStationsID)")
         }
     }
 

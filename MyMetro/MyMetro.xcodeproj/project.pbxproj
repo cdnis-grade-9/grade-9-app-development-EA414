@@ -13,8 +13,11 @@
 		F010E8A528BF92C900E677AB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F010E8A328BF92C900E677AB /* Main.storyboard */; };
 		F010E8A728BF92CC00E677AB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F010E8A628BF92CC00E677AB /* Assets.xcassets */; };
 		F010E8AA28BF92CC00E677AB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F010E8A828BF92CC00E677AB /* LaunchScreen.storyboard */; };
+		F05476B628E2A3E8009D2117 /* DensityHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F05476B528E2A3E8009D2117 /* DensityHandler.swift */; };
 		F059159F28C1B5F000CBBAE1 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F059159E28C1B5F000CBBAE1 /* GameViewController.swift */; };
 		F05DF77628C72C2200577AA9 /* StationClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F05DF77528C72C2200577AA9 /* StationClass.swift */; };
+		F0620BF928E177D000F7FECB /* AudioHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0620BF828E177D000F7FECB /* AudioHandler.swift */; };
+		F0620C0628E18B7E00F7FECB /* buildingSoundEffects.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F0620C0528E18B7E00F7FECB /* buildingSoundEffects.mp3 */; };
 		F0D4860228D064ED007B1263 /* GameObjectEnabilityAndVisibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0D4860128D064ED007B1263 /* GameObjectEnabilityAndVisibility.swift */; };
 		F0D4860428D065DA007B1263 /* GameTimeHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0D4860328D065DA007B1263 /* GameTimeHandler.swift */; };
 		F0D4860628D2E02D007B1263 /* NewLineHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0D4860528D2E02D007B1263 /* NewLineHandler.swift */; };
@@ -32,8 +35,11 @@
 		F010E8A628BF92CC00E677AB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F010E8A928BF92CC00E677AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F010E8AB28BF92CC00E677AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F05476B528E2A3E8009D2117 /* DensityHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DensityHandler.swift; sourceTree = "<group>"; };
 		F059159E28C1B5F000CBBAE1 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		F05DF77528C72C2200577AA9 /* StationClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationClass.swift; sourceTree = "<group>"; };
+		F0620BF828E177D000F7FECB /* AudioHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioHandler.swift; sourceTree = "<group>"; };
+		F0620C0528E18B7E00F7FECB /* buildingSoundEffects.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = buildingSoundEffects.mp3; path = ../../../../../../../../Downloads/buildingSoundEffects.mp3; sourceTree = "<group>"; };
 		F0D4860128D064ED007B1263 /* GameObjectEnabilityAndVisibility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameObjectEnabilityAndVisibility.swift; sourceTree = "<group>"; };
 		F0D4860328D065DA007B1263 /* GameTimeHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameTimeHandler.swift; sourceTree = "<group>"; };
 		F0D4860528D2E02D007B1263 /* NewLineHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewLineHandler.swift; sourceTree = "<group>"; };
@@ -72,23 +78,82 @@
 		F010E89C28BF92C900E677AB /* MyMetro */ = {
 			isa = PBXGroup;
 			children = (
-				F0D4860128D064ED007B1263 /* GameObjectEnabilityAndVisibility.swift */,
-				F0D4860328D065DA007B1263 /* GameTimeHandler.swift */,
-				F0D4860928D2E891007B1263 /* stationLevelIncrease.swift */,
-				F05DF77528C72C2200577AA9 /* StationClass.swift */,
-				F010E89D28BF92C900E677AB /* AppDelegate.swift */,
-				F0D4860728D2E0A7007B1263 /* UIHandler.swift */,
-				F0D4860528D2E02D007B1263 /* NewLineHandler.swift */,
-				F0D4860B28D2E8F2007B1263 /* GameButtons.swift */,
-				F059159E28C1B5F000CBBAE1 /* GameViewController.swift */,
-				F010E89F28BF92C900E677AB /* SceneDelegate.swift */,
 				F010E8A128BF92C900E677AB /* ViewController.swift */,
+				F0620C0228E188F800F7FECB /* GameViewController */,
 				F010E8A328BF92C900E677AB /* Main.storyboard */,
 				F010E8A628BF92CC00E677AB /* Assets.xcassets */,
 				F010E8A828BF92CC00E677AB /* LaunchScreen.storyboard */,
 				F010E8AB28BF92CC00E677AB /* Info.plist */,
 			);
 			path = MyMetro;
+			sourceTree = "<group>";
+		};
+		F0620BFA28E178DA00F7FECB /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				F0620BFB28E178E500F7FECB /* SFX */,
+			);
+			path = Sounds;
+			sourceTree = "<group>";
+		};
+		F0620BFB28E178E500F7FECB /* SFX */ = {
+			isa = PBXGroup;
+			children = (
+				F0620C0528E18B7E00F7FECB /* buildingSoundEffects.mp3 */,
+			);
+			path = SFX;
+			sourceTree = "<group>";
+		};
+		F0620C0028E188BB00F7FECB /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				F010E89D28BF92C900E677AB /* AppDelegate.swift */,
+				F010E89F28BF92C900E677AB /* SceneDelegate.swift */,
+			);
+			path = Delegates;
+			sourceTree = "<group>";
+		};
+		F0620C0128E188DA00F7FECB /* UIElements */ = {
+			isa = PBXGroup;
+			children = (
+				F0D4860128D064ED007B1263 /* GameObjectEnabilityAndVisibility.swift */,
+				F059159E28C1B5F000CBBAE1 /* GameViewController.swift */,
+				F0D4860728D2E0A7007B1263 /* UIHandler.swift */,
+				F0D4860B28D2E8F2007B1263 /* GameButtons.swift */,
+			);
+			path = UIElements;
+			sourceTree = "<group>";
+		};
+		F0620C0228E188F800F7FECB /* GameViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F0620C0128E188DA00F7FECB /* UIElements */,
+				F0620C0328E1892500F7FECB /* Stations */,
+				F0620C0428E1894600F7FECB /* GameFunction */,
+				F0620BFA28E178DA00F7FECB /* Sounds */,
+				F0620C0028E188BB00F7FECB /* Delegates */,
+			);
+			path = GameViewController;
+			sourceTree = "<group>";
+		};
+		F0620C0328E1892500F7FECB /* Stations */ = {
+			isa = PBXGroup;
+			children = (
+				F05DF77528C72C2200577AA9 /* StationClass.swift */,
+				F0D4860928D2E891007B1263 /* stationLevelIncrease.swift */,
+				F0D4860528D2E02D007B1263 /* NewLineHandler.swift */,
+			);
+			path = Stations;
+			sourceTree = "<group>";
+		};
+		F0620C0428E1894600F7FECB /* GameFunction */ = {
+			isa = PBXGroup;
+			children = (
+				F05476B528E2A3E8009D2117 /* DensityHandler.swift */,
+				F0620BF828E177D000F7FECB /* AudioHandler.swift */,
+				F0D4860328D065DA007B1263 /* GameTimeHandler.swift */,
+			);
+			path = GameFunction;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -150,6 +215,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F010E8AA28BF92CC00E677AB /* LaunchScreen.storyboard in Resources */,
+				F0620C0628E18B7E00F7FECB /* buildingSoundEffects.mp3 in Resources */,
 				F010E8A728BF92CC00E677AB /* Assets.xcassets in Resources */,
 				F010E8A528BF92C900E677AB /* Main.storyboard in Resources */,
 			);
@@ -163,7 +229,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				F0D4860A28D2E891007B1263 /* stationLevelIncrease.swift in Sources */,
+				F0620BF928E177D000F7FECB /* AudioHandler.swift in Sources */,
 				F05DF77628C72C2200577AA9 /* StationClass.swift in Sources */,
+				F05476B628E2A3E8009D2117 /* DensityHandler.swift in Sources */,
 				F0D4860428D065DA007B1263 /* GameTimeHandler.swift in Sources */,
 				F059159F28C1B5F000CBBAE1 /* GameViewController.swift in Sources */,
 				F0D4860228D064ED007B1263 /* GameObjectEnabilityAndVisibility.swift in Sources */,

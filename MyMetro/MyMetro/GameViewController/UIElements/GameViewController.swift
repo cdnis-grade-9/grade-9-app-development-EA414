@@ -6,13 +6,14 @@
 //
 
 import UIKit
+import AVFoundation
 // literally only outlets and variables
 class GameViewController: UIViewController {
 
     //Station UI outlets
     @IBOutlet var stationUIName: UILabel!
     @IBOutlet var stationUICrowdDensity: UILabel!
-    @IBOutlet var stationUIDensityBar: UIView!
+    @IBOutlet var stationUIDensityBar: UIProgressView!
     
     //Genral Game Outlets
     @IBOutlet var timeBar: UIProgressView!
@@ -38,10 +39,13 @@ class GameViewController: UIViewController {
     @IBOutlet var CentralOutlet: UIButton!
     @IBOutlet var HungHomOutlet: UIButton!
     
-    @IBOutlet var test: UILabel!
-    
     //station image outlets
     @IBOutlet var HungHomImage: UIImageView!
+    @IBOutlet var exitButtonOutlet: UIButton!
+    
+    // resource outlets
+    @IBOutlet var UImoneyLabel: UILabel!
+    @IBOutlet var UItunnelLabel: UILabel!
     
     //variables
     var time = 0.00
@@ -59,6 +63,14 @@ class GameViewController: UIViewController {
     var currentRound = 0 //either 1 or 2
     var buttonTask = 0 // 0 = show station info, 1 = extend line
     var colorSelected = false // if color is selected
+    var money = 500
+    var st1 = String()
+    var st2 = String()
+    var tunnelNum = 3
+    var unlockedStationsID = [1,2]
+    
+    //sfx
+    var buildSound: AVAudioPlayer?
     
     static var newColorLine = UIColor()
     static var newColorLineString = String()

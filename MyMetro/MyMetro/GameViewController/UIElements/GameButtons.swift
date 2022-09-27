@@ -25,18 +25,20 @@ extension GameViewController // handles game buttons
             {
                 firstX = i.x
                 firstY = i.y
+                st1 = i.loc
                 fromStationLabelDiff.text = String(i.name)
                 enabilityOfStations(stID: i.id, tf: false)
-                test.text = String(currentRound)
             }
             if currentRound == 2
             {
                 secondX = i.x
                 secondY = i.y
+                st2 = i.loc
                 if colorSelected == true
                 {
+                    let tunnel = checkForTunnel()
                     toStationLabelDiff.text = String(i.name)
-                    drawLine(colorID: GameViewController.newColorLine, start: CGPoint(x: firstX, y: firstY), end: CGPoint(x: secondX, y: secondY))
+                    drawLine(colorID: GameViewController.newColorLine, start: CGPoint(x: firstX, y: firstY), end: CGPoint(x: secondX, y: secondY), tunnel: tunnel)
                     addStationVisibility(x: true, phase: 0)
                     colorSelected = false
                     fromStationLabelDiff.text = "-FromStation-"
@@ -44,18 +46,18 @@ extension GameViewController // handles game buttons
                     colorLabelDiff.text = "-None-"
                     GameViewController.newColorLine = UIColor()
                     GameViewController.newColorLineString = String()
-                    test.text = String(currentRound)
                 }
-                enabilityOfStations(stID: i.id, tf: false)
                 currentRound = 0 // resets the round
                 buttonTask = 0 //resets the button
-                addStationOutlet.isHidden = false // makes the button not hidden again
+                addStationOutlet.isHidden = false
+                stationUIVisibility(tf: true)
+                enabilityOfStations(stID: 0, tf: true)
             }
         }
     }
     @IBAction func AdmiraltyButton(_ sender: Any)
     {
-        let i = newStation.st_admiralty
+        let i = newStation.st_admiralty // using i here as it simplifies code when copying and pasting
         if buttonTask == 0
         {
             loadStation(stationID: i.id)
@@ -68,20 +70,21 @@ extension GameViewController // handles game buttons
             {
                 firstX = i.x
                 firstY = i.y
+                st1 = i.loc
                 fromStationLabelDiff.text = String(i.name)
                 enabilityOfStations(stID: i.id, tf: false)
-                test.text = String(currentRound)
             }
             if currentRound == 2
             {
-                test.text = String(currentRound)
+                st2 = i.loc
                 secondX = i.x
                 secondY = i.y
                 
                 if colorSelected == true
                 {
+                    let tunnel = checkForTunnel()
                     toStationLabelDiff.text = String(i.name)
-                    drawLine(colorID: GameViewController.newColorLine, start: CGPoint(x: firstX, y: firstY), end: CGPoint(x: secondX, y: secondY))
+                    drawLine(colorID: GameViewController.newColorLine, start: CGPoint(x: firstX, y: firstY), end: CGPoint(x: secondX, y: secondY), tunnel: tunnel)
                     addStationVisibility(x: true, phase: 0)
                     colorSelected = false
                     fromStationLabelDiff.text = "-FromStation-"
@@ -90,10 +93,11 @@ extension GameViewController // handles game buttons
                     GameViewController.newColorLine = UIColor()
                     GameViewController.newColorLineString = String()
                 }
-                enabilityOfStations(stID: i.id, tf: false)
                 currentRound = 0 // resets the round
                 buttonTask = 0 //resets the button
                 addStationOutlet.isHidden = false
+                stationUIVisibility(tf: true)
+                enabilityOfStations(stID: 0, tf: true)
             }
             
         }
@@ -112,22 +116,22 @@ extension GameViewController // handles game buttons
             currentRound += 1
             if currentRound == 1
             {
-                test.text = String(currentRound)
                 firstX = i.x
                 firstY = i.y
+                st1 = i.loc
                 fromStationLabelDiff.text = String(i.name)
                 enabilityOfStations(stID: i.id, tf: false)
             }
             if currentRound == 2
             {
-                test.text = String(currentRound)
+                st2 = i.loc
                 secondX = i.x
                 secondY = i.y
-                
                 if colorSelected == true
                 {
+                    let tunnel = checkForTunnel()
                     toStationLabelDiff.text = String(i.name)
-                    drawLine(colorID: GameViewController.newColorLine, start: CGPoint(x: firstX, y: firstY), end: CGPoint(x: secondX, y: secondY))
+                    drawLine(colorID: GameViewController.newColorLine, start: CGPoint(x: firstX, y: firstY), end: CGPoint(x: secondX, y: secondY), tunnel: tunnel)
                     addStationVisibility(x: true, phase: 0)
                     colorSelected = false
                     fromStationLabelDiff.text = "-FromStation-"
@@ -136,11 +140,11 @@ extension GameViewController // handles game buttons
                     GameViewController.newColorLine = UIColor()
                     GameViewController.newColorLineString = String()
                 }
-
                 currentRound = 0 // resets the round
                 buttonTask = 0 //resets the button
                 addStationOutlet.isHidden = false
-                enabilityOfStations(stID: i.id, tf: true)
+                stationUIVisibility(tf: true)
+                enabilityOfStations(stID: 0, tf: true)
             }
         }
     }

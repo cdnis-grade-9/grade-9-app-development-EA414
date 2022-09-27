@@ -471,13 +471,6 @@
                                     <action selector="CentralButton:" destination="b2U-11-Zpq" eventType="touchUpInside" id="fSp-ZN-lle"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7l8-1p-Uwx">
-                                <rect key="frame" x="696" y="185" width="36" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="hCe-TK-2ly"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -490,11 +483,14 @@
                         <outlet property="CentralOutlet" destination="4fd-Yp-Xb8" id="s6h-tM-OqU"/>
                         <outlet property="HungHomImage" destination="60H-ea-lRj" id="O0Y-Ei-5he"/>
                         <outlet property="HungHomOutlet" destination="DTl-6M-UTD" id="q2G-Hd-VH3"/>
+                        <outlet property="UImoneyLabel" destination="nPz-d4-SvP" id="4zl-KH-HAA"/>
+                        <outlet property="UItunnelLabel" destination="nCa-r7-9hb" id="yUe-aH-laV"/>
                         <outlet property="addStationOutlet" destination="3ZM-A8-aZz" id="JRb-3K-YOn"/>
                         <outlet property="colorLabel" destination="InV-yG-1rB" id="UAv-5b-DbM"/>
                         <outlet property="colorLabelDiff" destination="WGo-Ej-tG0" id="FOe-tm-f4R"/>
                         <outlet property="dayLabel" destination="rob-1r-0Qo" id="DQE-hg-lcK"/>
                         <outlet property="downArrowPic" destination="K8P-7Z-nlQ" id="xP5-3u-yO2"/>
+                        <outlet property="exitButtonOutlet" destination="9Cx-mR-jDR" id="OvT-cT-ZUH"/>
                         <outlet property="fromStationLabelDiff" destination="Wrx-sm-9dI" id="fRu-2z-e2U"/>
                         <outlet property="playPic" destination="heB-Yy-DPA" id="hwe-Sz-NX4"/>
                         <outlet property="stationUIBlueButton" destination="fpB-qw-E05" id="GNZ-uc-cfT"/>
@@ -505,7 +501,6 @@
                         <outlet property="stationUIName" destination="8dc-3Z-mZD" id="G85-kU-NZp"/>
                         <outlet property="stationUIRedButton" destination="fKO-3o-MaI" id="mym-Wi-F7q"/>
                         <outlet property="stationUIYellowButton" destination="ti5-qL-6sS" id="t9V-bI-8Oo"/>
-                        <outlet property="test" destination="7l8-1p-Uwx" id="f1g-r9-Abh"/>
                         <outlet property="timeBar" destination="CWI-xI-S23" id="cdC-6B-RG2"/>
                         <outlet property="toStationLabelDiff" destination="Ipt-jb-Hdh" id="GFQ-OH-OmD"/>
                     </connections>
