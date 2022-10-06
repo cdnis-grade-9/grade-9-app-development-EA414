@@ -26,6 +26,7 @@ extension GameViewController // handles game buttons
                 firstX = i.x
                 firstY = i.y
                 st1 = i.loc
+                st1ID = Int(i.id)
                 fromStationLabelDiff.text = String(i.name)
                 enabilityOfStations(stID: i.id, tf: false)
             }
@@ -34,6 +35,7 @@ extension GameViewController // handles game buttons
                 secondX = i.x
                 secondY = i.y
                 st2 = i.loc
+                st2ID = Int(i.id)
                 if colorSelected == true
                 {
                     let tunnel = checkForTunnel()
@@ -71,6 +73,7 @@ extension GameViewController // handles game buttons
                 firstX = i.x
                 firstY = i.y
                 st1 = i.loc
+                st1ID = Int(i.id)
                 fromStationLabelDiff.text = String(i.name)
                 enabilityOfStations(stID: i.id, tf: false)
             }
@@ -79,7 +82,7 @@ extension GameViewController // handles game buttons
                 st2 = i.loc
                 secondX = i.x
                 secondY = i.y
-                
+                st2ID = Int(i.id)
                 if colorSelected == true
                 {
                     let tunnel = checkForTunnel()
@@ -119,11 +122,13 @@ extension GameViewController // handles game buttons
                 firstX = i.x
                 firstY = i.y
                 st1 = i.loc
+                st1ID = Int(i.id)
                 fromStationLabelDiff.text = String(i.name)
                 enabilityOfStations(stID: i.id, tf: false)
             }
             if currentRound == 2
             {
+                st2ID = Int(i.id)
                 st2 = i.loc
                 secondX = i.x
                 secondY = i.y
@@ -148,12 +153,10 @@ extension GameViewController // handles game buttons
             }
         }
     }
-
+    
     @IBAction func exitButton(_ sender: Any)
     {
-        stationUIVisibility(tf: true)
-        enabilityOfStations(stID: 0, tf: true)
-        buttonTask = 0
+        exitButtonFunction()
     }
 }
 

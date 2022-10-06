@@ -43,9 +43,30 @@ class GameViewController: UIViewController {
     @IBOutlet var HungHomImage: UIImageView!
     @IBOutlet var exitButtonOutlet: UIButton!
     
-    // resource outlets
+    // resource outlets bottom
+    @IBOutlet var UIbuyCartButton: UIButton!
+    @IBOutlet var UIbuyTrainButton: UIButton!
+    @IBOutlet var UIBuyTunnelButton: UIButton!
     @IBOutlet var UImoneyLabel: UILabel!
+    @IBOutlet var UIIncomeLabel: UILabel!
     @IBOutlet var UItunnelLabel: UILabel!
+    @IBOutlet var UIcartNumLabel: UILabel!
+    @IBOutlet var UItrainNumLabel: UILabel!
+    @IBOutlet var UItunnelInfoLabel: UILabel!
+    @IBOutlet var UItunnelMoneyLabel: UILabel!
+    @IBOutlet var UIbuyTunnelImage: UIImageView!
+    
+    // resource menu outlets
+    
+    @IBOutlet var UIresourceButton: UIButton!
+    @IBOutlet var trainMoneyLabel: UILabel!
+    @IBOutlet var cartMoneyLabel: UILabel!
+    @IBOutlet var trainInfoLabel: UILabel!
+    @IBOutlet var cartInfoLabel: UILabel!
+    @IBOutlet var buyresourceTrainImage: UIImageView!
+    @IBOutlet var buyResourceCartImage: UIImageView!
+    
+    
     
     //variables
     var time = 0.00
@@ -66,8 +87,18 @@ class GameViewController: UIViewController {
     var money = 500
     var st1 = String()
     var st2 = String()
-    var tunnelNum = 3
+    var tunnelNum = 2
+    var cartNum = 1
+    var trainNum = 1
+    var lineNum = 0
     var unlockedStationsID = [1,2]
+    var connectedStationsID = [] as NSMutableArray
+    var resourceButtonFunc = "buyResources"
+    var cartPrice = 150
+    var trainPrice = 600
+    var tunnelPrice = 200
+    var st1ID = Int()
+    var st2ID = Int()
     
     //sfx
     var buildSound: AVAudioPlayer?

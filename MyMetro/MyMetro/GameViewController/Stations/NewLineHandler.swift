@@ -45,6 +45,7 @@ extension GameViewController // this file adds a new line
     
     @IBAction func addStation(_ sender: Any)
     {
+        UIresourceButton.isHidden = true
         exitButtonOutlet.isEnabled = false
         addStationOutlet.isHidden = true
         buttonTask = 1 // sets the button task to extend line
@@ -73,7 +74,9 @@ extension GameViewController // this file adds a new line
         buttonTask = 0
         resourceManagementLine()
         buildSFX()
-        
+        UIresourceButton.isHidden = false
+        incLineArrayByID(st1ID: st1ID, st2ID: st2ID) //increases connected stations
+        lineNum += 1
     }
     
     func resourceManagementLine()
@@ -97,6 +100,24 @@ extension GameViewController // this file adds a new line
         else
         {
             return false
+        }
+    }
+
+    func incLineArrayByID(st1ID: Int, st2ID: Int)
+    {
+        if connectedStationsID.contains(st1ID)
+        {
+        }
+        else
+        {
+            connectedStationsID.add(st1ID) //used add here cuz i have a nsmutable array as i cannot have a blank array
+        }
+        if connectedStationsID.contains(st2ID)
+        {
+        }
+        else
+        {
+            connectedStationsID.add(st2ID) //used add here cuz i have a nsmutable array as i cannot have a blank array
         }
     }
 }

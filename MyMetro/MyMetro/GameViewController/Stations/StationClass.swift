@@ -16,8 +16,9 @@ class newStation
     var y: Int
     var id: Int
     var loc: String // HK (hk island), KLN (kowloon) , LNT (lantau)
+    var isConnected: Bool //true = connected, false = not connected
 
-    init(id: Int, name: String, crowdedness: Float, stationSizeLvl: Int, stationFacilityLvl: Int, x: Int, y: Int, loc: String) {
+    init(id: Int, name: String, crowdedness: Float, stationSizeLvl: Int, stationFacilityLvl: Int, x: Int, y: Int, loc: String, isConnected: Bool) {
         self.name = name
         self.crowdedness = crowdedness
         self.stationSizeLvl = stationSizeLvl
@@ -26,9 +27,10 @@ class newStation
         self.y = y
         self.id = id
         self.loc = loc
+        self.isConnected = isConnected
     }
     
-    static var st_central = newStation(id: 2, name: "Central Station", crowdedness: 2, stationSizeLvl: 1, stationFacilityLvl: 1, x: 298, y: 322, loc: "HK")
-    static var st_admiralty = newStation(id: 1, name: "Admiralty Station", crowdedness: 3, stationSizeLvl: 1, stationFacilityLvl: 1, x: 385, y: 322, loc: "HK")
-    static var st_hunghom = newStation(id: 3, name: "Hung Hom Station", crowdedness: 2, stationSizeLvl: 1, stationFacilityLvl: 1, x: 320, y: 247, loc: "KLN")
+    static var st_central = newStation(id: 2, name: "Central Station", crowdedness: 2, stationSizeLvl: 1, stationFacilityLvl: 1, x: 298, y: 322, loc: "HK", isConnected: false)
+    static var st_admiralty = newStation(id: 1, name: "Admiralty Station", crowdedness: 3, stationSizeLvl: 1, stationFacilityLvl: 1, x: 385, y: 322, loc: "HK", isConnected: false)
+    static var st_hunghom = newStation(id: 3, name: "Hung Hom Station", crowdedness: 2, stationSizeLvl: 1, stationFacilityLvl: 1, x: 320, y: 247, loc: "KLN", isConnected: false)
 }

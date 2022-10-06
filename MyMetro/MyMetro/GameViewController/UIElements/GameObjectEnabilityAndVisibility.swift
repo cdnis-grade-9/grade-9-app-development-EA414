@@ -79,7 +79,6 @@ extension GameViewController // GameObjectEnabilityAndVisibility
             print("ERROR: NULL(DEFAULT) - NO CLASS - RETURNING ID 1")
         }
         return classVar
-        
     }
 
     func loadStation(stationID: Int) // loads a station UI detail on right
@@ -118,4 +117,48 @@ extension GameViewController // GameObjectEnabilityAndVisibility
         }
     }
     
+    func buyResourcesUI(show: Bool)
+    {
+        var hiddenVar = false
+        if show == true
+        {
+            hiddenVar = false
+        }
+        else if show == false
+        {
+            hiddenVar = true
+        }
+        if money >= trainPrice
+        {
+            UIbuyTrainButton.isEnabled = true
+        }
+        if money >= cartPrice
+        {
+            UIbuyCartButton.isEnabled = true
+        }
+        if money >= tunnelPrice
+        {
+            UIBuyTunnelButton.isEnabled = true
+        }
+        UIbuyCartButton.isHidden = hiddenVar
+        UIBuyTunnelButton.isHidden = hiddenVar
+        UIbuyTrainButton.isHidden = hiddenVar
+        trainMoneyLabel.isHidden = hiddenVar
+        UItunnelMoneyLabel.isHidden = hiddenVar
+        cartMoneyLabel.isHidden = hiddenVar
+        trainInfoLabel.isHidden = hiddenVar
+        UItunnelInfoLabel.isHidden = hiddenVar
+        cartInfoLabel.isHidden = hiddenVar
+        buyresourceTrainImage.isHidden = hiddenVar
+        UIbuyTunnelImage.isHidden = hiddenVar
+        buyResourceCartImage.isHidden = hiddenVar
+    }
+    
+    func exitButtonFunction()
+    {
+        stationUIVisibility(tf: true)
+        enabilityOfStations(stID: 0, tf: true)
+        buttonTask = 0
+    }
+
 }

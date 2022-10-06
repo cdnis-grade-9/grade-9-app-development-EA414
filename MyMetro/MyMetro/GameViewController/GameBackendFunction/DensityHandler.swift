@@ -19,6 +19,18 @@ extension GameViewController
             var id = returnSTClassByID(stationID: unlockedStationsID[randomStationAffected - 1]) // gets the station that is going to be chnaged
             id.crowdedness += Float(randomDensityInc)/10 //changes value
         }
+        CheckForLoss()
+    }
+    func CheckForLoss()
+    {
+        for i in 1...Int(unlockedStationsID.count)
+        {
+            var id = returnSTClassByID(stationID: unlockedStationsID[i - 1])
+            if id.crowdedness == 10
+            {
+                print("\(id.name) has reached it's maximum capacity. You Lose")
+            }
+        }
     }
 }
 

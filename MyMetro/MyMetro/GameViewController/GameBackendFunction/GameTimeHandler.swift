@@ -28,6 +28,7 @@ extension GameViewController //this file only handles game time
             if day == 8
             {
                 day = 1
+                incomeCalculator()
             }
             if day == 1
             {
@@ -39,6 +40,7 @@ extension GameViewController //this file only handles game time
             }
             else if day == 3
             {
+                UIIncomeLabel.isHidden = true
                 dayLabel.text = "WED"
             }
             else if day == 4
