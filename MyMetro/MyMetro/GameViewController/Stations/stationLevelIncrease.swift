@@ -10,13 +10,12 @@ import UIKit
 
 extension GameViewController
 {
-    
     func checkLevel()
     {
         if totalDays == 3 // Hung Hom Station Activation
         {
             HungHomImage.isHidden = false
-            HungHomOutlet.isEnabled = true
+            HungHomButtonOutlet.isEnabled = true
             unlockedStationsID.append(newStation.st_hunghom.id)
             print("INFO: Added HungHom Station. Current Unlocked Stations By ID: \(unlockedStationsID)")
         }

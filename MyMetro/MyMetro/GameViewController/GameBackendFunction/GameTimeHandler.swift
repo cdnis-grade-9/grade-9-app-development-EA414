@@ -25,6 +25,7 @@ extension GameViewController //this file only handles game time
             totalDays += 1
             day += 1
             checkLevel()
+            loadProgressView(stationID: currentPage)
             if day == 8
             {
                 day = 1

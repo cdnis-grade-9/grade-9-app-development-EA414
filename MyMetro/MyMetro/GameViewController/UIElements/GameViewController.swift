@@ -14,13 +14,16 @@ class GameViewController: UIViewController {
     @IBOutlet var stationUIName: UILabel!
     @IBOutlet var stationUICrowdDensity: UILabel!
     @IBOutlet var stationUIDensityBar: UIProgressView!
+    @IBOutlet var useTrainImage: UIImageView!
+    @IBOutlet var useCartImage: UIImageView!
+    @IBOutlet var useTrainButton: UIButton!
+    @IBOutlet var useCartButton: UIButton!
     
     //Genral Game Outlets
     @IBOutlet var timeBar: UIProgressView!
     @IBOutlet var playPic: UIImageView!
     @IBOutlet var dayLabel: UILabel!
 
-    
     //New station UI outlets
     @IBOutlet var addStationOutlet: UIButton!
     @IBOutlet var stationUILineLabel: UILabel!
@@ -35,9 +38,9 @@ class GameViewController: UIViewController {
     @IBOutlet var downArrowPic: UIImageView!
     
     //station outlets
-    @IBOutlet var AdmiraltyOutlet: UIButton!
-    @IBOutlet var CentralOutlet: UIButton!
-    @IBOutlet var HungHomOutlet: UIButton!
+    @IBOutlet var AdmiraltyButtonOutlet: UIButton!
+    @IBOutlet var CentralButtonOutlet: UIButton!
+    @IBOutlet var HungHomButtonOutlet: UIButton!
     
     //station image outlets
     @IBOutlet var HungHomImage: UIImageView!
@@ -57,7 +60,6 @@ class GameViewController: UIViewController {
     @IBOutlet var UIbuyTunnelImage: UIImageView!
     
     // resource menu outlets
-    
     @IBOutlet var UIresourceButton: UIButton!
     @IBOutlet var trainMoneyLabel: UILabel!
     @IBOutlet var cartMoneyLabel: UILabel!
@@ -75,6 +77,7 @@ class GameViewController: UIViewController {
     var day = 1
     var infloop = true
     var totalDays = 1
+    var currentPage = 0
     var startStID = Int()
     var endStID = Int()
     var firstX = Int()

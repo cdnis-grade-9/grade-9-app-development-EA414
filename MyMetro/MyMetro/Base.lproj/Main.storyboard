@@ -474,7 +474,7 @@
                                 </connections>
                             </button>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="md9-we-rw7">
-                                <rect key="frame" x="818" y="70" width="81" height="31"/>
+                                <rect key="frame" x="810" y="65" width="81" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" red="0.19522023990000001" green="0.93743798899999997" blue="0.057450750580000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="Button"/>
@@ -484,7 +484,7 @@
                                 </connections>
                             </button>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xEa-mX-YF7">
-                                <rect key="frame" x="820" y="170" width="81" height="31"/>
+                                <rect key="frame" x="810" y="165" width="81" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" red="0.19522023990000001" green="0.93743798899999997" blue="0.057450750580000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="Button"/>
@@ -494,7 +494,7 @@
                                 </connections>
                             </button>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MHi-Mb-HPC" userLabel="UIbuy tunnel Button">
-                                <rect key="frame" x="820" y="259" width="81" height="31"/>
+                                <rect key="frame" x="812" y="254" width="81" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" red="0.080210897490000002" green="0.93743798899999997" blue="0.0093218034780000007" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="Button"/>
@@ -537,21 +537,21 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Reduce st. density by 50%" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dOG-4c-DZ9" userLabel="TrainInfoLabel">
-                                <rect key="frame" x="820" y="32" width="76" height="37"/>
+                                <rect key="frame" x="812" y="28" width="76" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Reduce st. density by 10%" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wk3-Mz-3EF" userLabel="CartInfoLabel">
-                                <rect key="frame" x="816" y="114" width="84" height="62"/>
+                                <rect key="frame" x="808" y="113" width="84" height="62"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Allows the player to be able to cross water" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Vb-jg-6aE" userLabel="TunnelInfoLabel">
-                                <rect key="frame" x="804" y="200" width="108" height="62"/>
+                                <rect key="frame" x="796" y="200" width="108" height="62"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                 <nil key="textColor"/>
@@ -573,6 +573,38 @@
                                     <action selector="addStation:" destination="b2U-11-Zpq" eventType="touchUpInside" id="bMN-fa-3yo"/>
                                 </connections>
                             </button>
+                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="train (2)" translatesAutoresizingMaskIntoConstraints="NO" id="EPa-qI-7n7" userLabel="UseTrainImage">
+                                <rect key="frame" x="732" y="127" width="53" height="54"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="PassengerCart" translatesAutoresizingMaskIntoConstraints="NO" id="Obt-rK-vyj" userLabel="UseCartImage">
+                                <rect key="frame" x="826" y="129" width="53" height="54"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eBH-d9-ZDQ" userLabel="UseTrainButton">
+                                <rect key="frame" x="729" y="182" width="58" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.080210897490000002" green="0.93743798899999997" blue="0.0093218034780000007" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Use">
+                                    <fontDescription key="titleFontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="useTrainButton:" destination="b2U-11-Zpq" eventType="touchUpInside" id="9wp-Su-sfk"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ek1-oy-Mrn" userLabel="UseCartButton">
+                                <rect key="frame" x="825" y="182" width="58" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.080210897490000002" green="0.93743798899999997" blue="0.0093218034780000007" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Use">
+                                    <fontDescription key="titleFontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="useCartButton:" destination="b2U-11-Zpq" eventType="touchUpInside" id="U80-kr-b3E"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="hCe-TK-2ly"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -581,10 +613,10 @@
                     <value key="contentSizeForViewInPopover" type="size" width="414" height="896"/>
                     <size key="freeformSize" width="925" height="430"/>
                     <connections>
-                        <outlet property="AdmiraltyOutlet" destination="twM-5K-UQB" id="vA5-d1-7Fc"/>
-                        <outlet property="CentralOutlet" destination="4fd-Yp-Xb8" id="s6h-tM-OqU"/>
+                        <outlet property="AdmiraltyButtonOutlet" destination="twM-5K-UQB" id="vA5-d1-7Fc"/>
+                        <outlet property="CentralButtonOutlet" destination="4fd-Yp-Xb8" id="s6h-tM-OqU"/>
+                        <outlet property="HungHomButtonOutlet" destination="DTl-6M-UTD" id="q2G-Hd-VH3"/>
                         <outlet property="HungHomImage" destination="60H-ea-lRj" id="O0Y-Ei-5he"/>
-                        <outlet property="HungHomOutlet" destination="DTl-6M-UTD" id="q2G-Hd-VH3"/>
                         <outlet property="UIBuyTunnelButton" destination="MHi-Mb-HPC" id="htM-9x-dad"/>
                         <outlet property="UIIncomeLabel" destination="ZWZ-JU-zy9" id="9va-uS-ISY"/>
                         <outlet property="UIbuyCartButton" destination="xEa-mX-YF7" id="L9C-SD-fwu"/>
@@ -621,6 +653,10 @@
                         <outlet property="toStationLabelDiff" destination="Ipt-jb-Hdh" id="GFQ-OH-OmD"/>
                         <outlet property="trainInfoLabel" destination="dOG-4c-DZ9" id="1KX-Ht-gaX"/>
                         <outlet property="trainMoneyLabel" destination="9VL-4g-UWq" id="T7m-bp-eQk"/>
+                        <outlet property="useCartButton" destination="ek1-oy-Mrn" id="xK5-2X-X0z"/>
+                        <outlet property="useCartImage" destination="Obt-rK-vyj" id="v1f-Iy-s0f"/>
+                        <outlet property="useTrainButton" destination="eBH-d9-ZDQ" id="7mI-xn-QMx"/>
+                        <outlet property="useTrainImage" destination="EPa-qI-7n7" id="s0g-Zf-qiY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aq6-qn-2zr" sceneMemberID="firstResponder"/>

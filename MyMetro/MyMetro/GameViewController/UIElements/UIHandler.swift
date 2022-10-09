@@ -31,4 +31,12 @@ extension GameViewController //this file manages the UI underneath
         }
     }
     
+    func updateResourceUI()
+    {
+        UImoneyLabel.text = String(money)
+        UIcartNumLabel.text = String(cartNum)
+        UItrainNumLabel.text = String(trainNum)
+        UItunnelLabel.text = String(tunnelNum)
+    }
+    
 }

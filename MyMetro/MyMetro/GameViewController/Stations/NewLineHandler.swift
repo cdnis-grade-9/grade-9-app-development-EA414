@@ -50,7 +50,7 @@ extension GameViewController // this file adds a new line
         addStationOutlet.isHidden = true
         buttonTask = 1 // sets the button task to extend line
         addStationVisibility(x: false, phase : 1)
-        stationUIVisibility(tf: true)
+        stationUIVisibility(hidden: true)
     }
     
     func drawLine(colorID: UIColor, start: CGPoint, end: CGPoint, tunnel: Bool)
