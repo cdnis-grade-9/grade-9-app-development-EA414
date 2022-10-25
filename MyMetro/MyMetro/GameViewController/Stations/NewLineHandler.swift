@@ -46,8 +46,11 @@ extension GameViewController // this file adds a new line
     @IBAction func addStation(_ sender: Any)
     {
         UIresourceButton.isHidden = true
+        buyResourceImage.isHidden = true
         exitButtonOutlet.isEnabled = false
         addStationOutlet.isHidden = true
+        newStationImage.isHidden = true
+        homeMenuImage.isHidden = true
         buttonTask = 1 // sets the button task to extend line
         addStationVisibility(x: false, phase : 1)
         stationUIVisibility(hidden: true)
@@ -75,6 +78,7 @@ extension GameViewController // this file adds a new line
         resourceManagementLine()
         buildSFX()
         UIresourceButton.isHidden = false
+        buyResourceImage.isHidden = false
         incLineArrayByID(st1ID: st1ID, st2ID: st2ID) //increases connected stations
         lineNum += 1
     }

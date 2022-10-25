@@ -37,6 +37,54 @@ extension GameViewController // handles game buttons
         exitButtonFunction()
     }
     
+    @IBAction func TaiKooButton(_ sender: Any)
+    {
+        let i = newStation.st_taikoo
+        butttonFunc(i: i)
+    }
+    @IBAction func ChaiWanButton(_ sender: Any)
+    {
+        let i = newStation.st_chaiwan
+        butttonFunc(i: i)
+    }
+    @IBAction func HKUButton(_ sender: Any)
+    {
+        let i = newStation.st_hku
+        butttonFunc(i: i)
+    }
+    @IBAction func WongChukHangButton(_ sender: Any)
+    {
+        let i = newStation.st_wongchukhang
+        butttonFunc(i: i)
+    }
+    @IBAction func causewayBayButton(_ sender: Any)
+    {
+        let i = newStation.st_causewaybay
+        butttonFunc(i: i)
+    }
+    
+    @IBAction func KowloonButton(_ sender: Any)
+    {
+        let i = newStation.st_kowloon
+        butttonFunc(i: i)
+    }
+    @IBAction func TSTButton(_ sender: Any)
+    {
+        let i = newStation.st_tst
+        butttonFunc(i: i)
+    }
+    @IBAction func AustinButton(_ sender: Any)
+    {
+        let i = newStation.st_austin
+        butttonFunc(i: i)
+    }
+    @IBAction func WhampoaButton(_ sender: Any)
+    {
+        let i = newStation.st_whampoa
+        butttonFunc(i: i)
+    }
+    
+    
     func butttonFunc(i: newStation)
     {
         useResourcesMoneyCheck()
@@ -84,6 +132,8 @@ extension GameViewController // handles game buttons
                 currentRound = 0 // resets the round
                 buttonTask = 0 //resets the button
                 addStationOutlet.isHidden = false
+                newStationImage.isHidden = false
+                homeMenuImage.isHidden = false
                 stationUIVisibility(hidden: true)
                 enabilityOfStations(stID: 0, enability: true)
             }

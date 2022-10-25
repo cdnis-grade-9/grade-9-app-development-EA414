@@ -16,6 +16,7 @@ extension GameViewController // GameObjectEnabilityAndVisibility
         {
             stationUILineLabel.isHidden = x
             stationUIGreenLine.isHidden = x
+            newLineLayout.isHidden = x
             stationUIBlueButton.isHidden = x
             stationUIRedButton.isHidden = x
             stationUIYellowButton.isHidden = x
@@ -38,6 +39,7 @@ extension GameViewController // GameObjectEnabilityAndVisibility
             colorLabelDiff.isHidden = x
             colorLabel.isHidden = x
             downArrowPic.isHidden = x
+            newLineLayout.isHidden = x
             fromStationLabelDiff.isHidden = x
             toStationLabelDiff.isHidden = x
         }
@@ -50,10 +52,11 @@ extension GameViewController // GameObjectEnabilityAndVisibility
       stationUICrowdDensity.isHidden = hidden
   }
 
-    func findStDetails(stationID: Int) -> (newStation, Optional<UIButton>)  // when making new station add smth here
+    func findStDetails(stationID: Int) -> (newStation, Optional<UIButton>, Optional<UIImageView>)  // when making new station add smth here
     {
         var classVar = newStation.st_central
         var labelVar = CentralButtonOutlet
+        var imageVar = HungHomImage
         switch stationID {
         case 0: // Reset UI
             print("ERROR: NULL(CASE 0) - NO CLASS - RETURNING ID 1")
@@ -66,11 +69,49 @@ extension GameViewController // GameObjectEnabilityAndVisibility
         case 3:
             classVar = newStation.st_hunghom
             labelVar = HungHomButtonOutlet
+            imageVar = HungHomImage
+        case 4:
+            classVar = newStation.st_chaiwan
+            labelVar = ChaiWanButtonOutlet
+            imageVar = ChaiWanImage
+        case 5:
+            classVar = newStation.st_taikoo
+            labelVar = TaiKooButtonOutlet
+            imageVar = TaiKooImage
+        case 6:
+            classVar = newStation.st_causewaybay
+            labelVar = CausewayBayButtonOutlet
+            imageVar = CausewayBayImage
+        case 7:
+            classVar = newStation.st_wongchukhang
+            labelVar = WongChukHangButtonOutlet
+            imageVar = WongChukHangImage
+        case 8:
+            classVar = newStation.st_hku
+            labelVar = HKUButtonOutlet
+            imageVar = HKUImage
+        case 9:
+            classVar = newStation.st_kowloon
+            labelVar = KowloonButtonOutlet
+            imageVar = KowloonImage
+        case 10:
+            classVar = newStation.st_tst
+            labelVar = TSTButtonOutlet
+            imageVar = TSTImage
+        case 11:
+            classVar = newStation.st_austin
+            labelVar = AustinButtonOutlet
+            imageVar = AustinImage
+        case 12:
+            classVar = newStation.st_whampoa
+            labelVar = WhampoaButtonOutlet
+            imageVar = WhampoaImage
+        
         default:
             print("ERROR: NULL(DEFAULT) - NO CLASS - RETURNING ID 1")
         }
-//        print(type(of: labelVar))
-        return (classVar, labelVar)
+//        print(type(of: imageVar))
+        return (classVar, labelVar, imageVar)
     }
     
     func loadProgressView(stationID: Int)
@@ -99,9 +140,9 @@ extension GameViewController // GameObjectEnabilityAndVisibility
     {
         if stID == 0
         {
-            for i in 1...(unlockedStationsID.count)
+            for i in 0...((unlockedStationsID.count)-1)
             {
-                let stButton = findStDetails(stationID: i).1
+                let stButton = findStDetails(stationID: unlockedStationsID[i]).1
                 stButton?.isEnabled = enability
             }
         }
@@ -138,15 +179,8 @@ extension GameViewController // GameObjectEnabilityAndVisibility
         UIbuyCartButton.isHidden = hiddenVar
         UIBuyTunnelButton.isHidden = hiddenVar
         UIbuyTrainButton.isHidden = hiddenVar
-        trainMoneyLabel.isHidden = hiddenVar
-        UItunnelMoneyLabel.isHidden = hiddenVar
-        cartMoneyLabel.isHidden = hiddenVar
-        trainInfoLabel.isHidden = hiddenVar
-        UItunnelInfoLabel.isHidden = hiddenVar
-        cartInfoLabel.isHidden = hiddenVar
-        buyresourceTrainImage.isHidden = hiddenVar
-        UIbuyTunnelImage.isHidden = hiddenVar
-        buyResourceCartImage.isHidden = hiddenVar
+        shopImage.isHidden = hiddenVar
+        shopExitOutlet.isHidden = hiddenVar
     }
     
     func exitButtonFunction()
@@ -159,7 +193,10 @@ extension GameViewController // GameObjectEnabilityAndVisibility
     func menuButtonsVis(hidden: Bool)
     {
         UIresourceButton.isHidden = hidden
+        buyResourceImage.isHidden = hidden
         addStationOutlet.isHidden = hidden
+        newStationImage.isHidden = hidden
+        homeMenuImage.isHidden = hidden
     }
     
     func useResourcesVis(hidden: Bool)

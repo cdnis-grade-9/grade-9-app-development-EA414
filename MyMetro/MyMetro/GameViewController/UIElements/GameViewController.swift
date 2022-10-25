@@ -41,10 +41,29 @@ class GameViewController: UIViewController {
     @IBOutlet var AdmiraltyButtonOutlet: UIButton!
     @IBOutlet var CentralButtonOutlet: UIButton!
     @IBOutlet var HungHomButtonOutlet: UIButton!
+    @IBOutlet var WongChukHangButtonOutlet: UIButton!
+    @IBOutlet var HKUButtonOutlet: UIButton!
+    @IBOutlet var ChaiWanButtonOutlet: UIButton!
+    @IBOutlet var TaiKooButtonOutlet: UIButton!
+    @IBOutlet var CausewayBayButtonOutlet: UIButton!
+    @IBOutlet var TSTButtonOutlet: UIButton!
+    @IBOutlet var WhampoaButtonOutlet: UIButton!
+    @IBOutlet var KowloonButtonOutlet: UIButton!
+    @IBOutlet var AustinButtonOutlet: UIButton!
+    
     
     //station image outlets
+    @IBOutlet var HKUImage: UIImageView!
     @IBOutlet var HungHomImage: UIImageView!
     @IBOutlet var exitButtonOutlet: UIButton!
+    @IBOutlet var WongChukHangImage: UIImageView!
+    @IBOutlet var CausewayBayImage: UIImageView!
+    @IBOutlet var ChaiWanImage: UIImageView!
+    @IBOutlet var TaiKooImage: UIImageView!
+    @IBOutlet var TSTImage: UIImageView!
+    @IBOutlet var WhampoaImage: UIImageView!
+    @IBOutlet var AustinImage: UIImageView!
+    @IBOutlet var KowloonImage: UIImageView!
     
     // resource outlets bottom
     @IBOutlet var UIbuyCartButton: UIButton!
@@ -55,18 +74,19 @@ class GameViewController: UIViewController {
     @IBOutlet var UItunnelLabel: UILabel!
     @IBOutlet var UIcartNumLabel: UILabel!
     @IBOutlet var UItrainNumLabel: UILabel!
-    @IBOutlet var UItunnelInfoLabel: UILabel!
-    @IBOutlet var UItunnelMoneyLabel: UILabel!
-    @IBOutlet var UIbuyTunnelImage: UIImageView!
+
     
     // resource menu outlets
     @IBOutlet var UIresourceButton: UIButton!
-    @IBOutlet var trainMoneyLabel: UILabel!
-    @IBOutlet var cartMoneyLabel: UILabel!
-    @IBOutlet var trainInfoLabel: UILabel!
-    @IBOutlet var cartInfoLabel: UILabel!
-    @IBOutlet var buyresourceTrainImage: UIImageView!
-    @IBOutlet var buyResourceCartImage: UIImageView!
+    @IBOutlet var shopExitOutlet: UIButton!
+    @IBOutlet var shopImage: UIImageView!
+    
+    
+    //game button images
+    @IBOutlet var buyResourceImage: UIImageView!
+    @IBOutlet var newStationImage: UIImageView!
+    @IBOutlet var homeMenuImage: UIImageView!
+    @IBOutlet var newLineLayout: UIImageView!
     
     
     

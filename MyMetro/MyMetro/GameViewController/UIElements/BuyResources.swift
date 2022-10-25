@@ -13,21 +13,14 @@ extension GameViewController // this file lets you purchase resources
 {
     @IBAction func buyResourcesButton(_ sender: Any)
     {
+        
+        exitButtonOutlet.isEnabled = false
         exitButtonFunction()
-        if resourceButtonFunc == "buyResources"
-        {
-            addStationOutlet.isHidden = true
-            buyResourcesUI(show: true)
-            UIresourceButton.setTitle("Exit", for: .normal)
-            resourceButtonFunc = "exit"
-        }
-        else if resourceButtonFunc == "exit"
-        {
-            addStationOutlet.isHidden = false
-            buyResourcesUI(show: false)
-            UIresourceButton.setTitle("Buy Resources", for: .normal)
-            resourceButtonFunc = "buyResources"
-        }
+        enabilityOfStations(stID: 0, enability: false)
+        addStationOutlet.isHidden = true
+        newStationImage.isHidden = true
+        homeMenuImage.isHidden = true
+        buyResourcesUI(show: true)
     }
     
     @IBAction func cartBuyButton(_ sender: Any)
@@ -76,5 +69,15 @@ extension GameViewController // this file lets you purchase resources
             UIBuyTunnelButton.isEnabled = false
             print("cant buy tunnel: insufficient funds")
         }
+    }
+    
+    @IBAction func shopExitButton(_ sender: Any)
+    {
+        addStationOutlet.isHidden = false
+        newStationImage.isHidden = false
+        homeMenuImage.isHidden = false
+        buyResourcesUI(show: false)
+        exitButtonOutlet.isEnabled = true
+        enabilityOfStations(stID: 0, enability: true)
     }
 }

@@ -10,14 +10,49 @@ import UIKit
 
 extension GameViewController
 {
+    func loadNewStation()
+    {
+        var randStationID = Int.random(in: 3...12)
+        while unlockedStationsID.contains(randStationID)
+        {
+            randStationID = Int.random(in: 3...12)
+        }
+        let dataSet = findStDetails(stationID: randStationID)
+        let image = dataSet.2
+        let buttonOutlet = dataSet.1
+        let stID = dataSet.0
+        print(stID.id)
+        image?.isHidden = false
+        buttonOutlet!.isEnabled = true
+        unlockedStationsID.append(stID.id)
+        print("INFO: Added \(stID.name). Current Unlocked Stations By ID: \(unlockedStationsID)")
+    }
+        
     func checkLevel()
     {
-        if totalDays == 3 // Hung Hom Station Activation
+        if totalDays == 2
         {
-            HungHomImage.isHidden = false
-            HungHomButtonOutlet.isEnabled = true
-            unlockedStationsID.append(newStation.st_hunghom.id)
-            print("INFO: Added HungHom Station. Current Unlocked Stations By ID: \(unlockedStationsID)")
+            loadNewStation()
+        }
+        if totalDays == 3
+        {
+            loadNewStation()
+        }
+        if totalDays == 4
+        {
+            loadNewStation()
+        }
+        if totalDays == 5
+        {
+            loadNewStation()
+        }
+        if totalDays == 6
+        {
+            loadNewStation()
+        }
+        if totalDays == 7
+        {
+            loadNewStation()
         }
     }
 
