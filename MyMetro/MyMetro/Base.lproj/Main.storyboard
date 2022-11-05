@@ -416,24 +416,6 @@
                                 <rect key="frame" x="545" y="396" width="23" height="23"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Station_Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8dc-3Z-mZD">
-                                <rect key="frame" x="696" y="20" width="218" height="20"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="20"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Crowd Density" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IXD-Ec-K6F">
-                                <rect key="frame" x="758" y="77" width="95" height="13"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="13"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <progressView hidden="YES" opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="qd9-Yk-05J">
-                                <rect key="frame" x="730" y="104" width="150" height="4"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </progressView>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Add Station" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sni-Eo-ChJ">
                                 <rect key="frame" x="769" y="24" width="77" height="13"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -647,6 +629,64 @@
                                     <action selector="shopExitButton:" destination="b2U-11-Zpq" eventType="touchUpInside" id="9Xa-Vc-sYu"/>
                                 </connections>
                             </button>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Station_Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8dc-3Z-mZD">
+                                <rect key="frame" x="696" y="20" width="218" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Crowdedness" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IXD-Ec-K6F">
+                                <rect key="frame" x="758" y="70" width="88" height="13"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="13"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <progressView hidden="YES" opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="qd9-Yk-05J">
+                                <rect key="frame" x="730" y="98" width="150" height="4"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </progressView>
+                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="StationScreen" translatesAutoresizingMaskIntoConstraints="NO" id="BFn-a0-Fmq" userLabel="stationMenu">
+                                <rect key="frame" x="678" y="122" width="240" height="257"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8EC-mb-mxb">
+                                <rect key="frame" x="800" y="233" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vIx-rM-0kM">
+                                <rect key="frame" x="800" y="313" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yEo-hV-Gfq" userLabel="serviceButton">
+                                <rect key="frame" x="710" y="286" width="75" height="63"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title=""/>
+                                <connections>
+                                    <action selector="stationServiceAction:" destination="b2U-11-Zpq" eventType="touchUpInside" id="dyz-WH-ZRY"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LM0-7H-meB" userLabel="sizeButton">
+                                <rect key="frame" x="710" y="205" width="75" height="63"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title=""/>
+                                <connections>
+                                    <action selector="stationSizeAction:" destination="b2U-11-Zpq" eventType="touchUpInside" id="g9s-o6-bmO"/>
+                                </connections>
+                            </button>
+                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="star2" translatesAutoresizingMaskIntoConstraints="NO" id="pYO-SW-5Fr">
+                                <rect key="frame" x="732" y="118" width="147" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="hCe-TK-2ly"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -698,8 +738,14 @@
                         <outlet property="newLineLayout" destination="Tzg-Ua-Z1A" id="ykM-Lc-YB9"/>
                         <outlet property="newStationImage" destination="0tt-oE-eiW" id="CDg-dC-0I6"/>
                         <outlet property="playPic" destination="heB-Yy-DPA" id="hwe-Sz-NX4"/>
+                        <outlet property="serviceButton" destination="yEo-hV-Gfq" id="6m9-v5-J5q"/>
                         <outlet property="shopExitOutlet" destination="zUr-7g-DmR" id="hXh-ds-g7z"/>
                         <outlet property="shopImage" destination="qoz-lS-Q5L" id="g3Z-cA-1HG"/>
+                        <outlet property="sizeButton" destination="LM0-7H-meB" id="AWV-84-1hV"/>
+                        <outlet property="stServicePriceLabel" destination="vIx-rM-0kM" id="DoX-Ji-0RM"/>
+                        <outlet property="stSizePriceLabel" destination="8EC-mb-mxb" id="8N3-nV-IHq"/>
+                        <outlet property="starImage" destination="pYO-SW-5Fr" id="wNI-eI-MJh"/>
+                        <outlet property="stationMenuImage" destination="BFn-a0-Fmq" id="YI0-ol-WDE"/>
                         <outlet property="stationUIBlueButton" destination="fpB-qw-E05" id="GNZ-uc-cfT"/>
                         <outlet property="stationUICrowdDensity" destination="IXD-Ec-K6F" id="OkN-fb-3HO"/>
                         <outlet property="stationUIDensityBar" destination="qd9-Yk-05J" id="x1q-Qy-jS8"/>
@@ -770,6 +816,7 @@
         <image name="Shop" width="556" height="840"/>
         <image name="Square" width="2048" height="2048"/>
         <image name="Star" width="275" height="270"/>
+        <image name="StationScreen" width="540" height="574"/>
         <image name="Triangle" width="158" height="147"/>
         <image name="clock" width="512" height="512"/>
         <image name="downArrow" width="512" height="512"/>
@@ -779,6 +826,7 @@
         <image name="newLineLayout" width="436" height="654"/>
         <image name="play" width="512" height="512"/>
         <image name="star" width="512" height="512"/>
+        <image name="star2" width="340" height="68"/>
         <image name="train" width="512" height="512"/>
         <image name="train (1)" width="512" height="512"/>
         <image name="train (2)" width="512" height="512"/>

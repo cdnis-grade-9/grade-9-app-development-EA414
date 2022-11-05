@@ -18,6 +18,11 @@ class GameViewController: UIViewController {
     @IBOutlet var useCartImage: UIImageView!
     @IBOutlet var useTrainButton: UIButton!
     @IBOutlet var useCartButton: UIButton!
+    @IBOutlet var stSizePriceLabel: UILabel!
+    @IBOutlet var stServicePriceLabel: UILabel!
+    @IBOutlet var sizeButton: UIButton!
+    @IBOutlet var serviceButton: UIButton!
+    @IBOutlet var starImage: UIImageView!
     
     //Genral Game Outlets
     @IBOutlet var timeBar: UIProgressView!
@@ -87,6 +92,7 @@ class GameViewController: UIViewController {
     @IBOutlet var newStationImage: UIImageView!
     @IBOutlet var homeMenuImage: UIImageView!
     @IBOutlet var newLineLayout: UIImageView!
+    @IBOutlet var stationMenuImage: UIImageView!
     
     
     
@@ -108,6 +114,7 @@ class GameViewController: UIViewController {
     var buttonTask = 0 // 0 = show station info, 1 = extend line
     var colorSelected = false // if color is selected
     var money = 500
+    var menuStationID = Int()
     var st1 = String()
     var st2 = String()
     var tunnelNum = 2
@@ -125,7 +132,7 @@ class GameViewController: UIViewController {
     
     //sfx
     var buildSound: AVAudioPlayer?
-    
+
     static var newColorLine = UIColor()
     static var newColorLineString = String()
     

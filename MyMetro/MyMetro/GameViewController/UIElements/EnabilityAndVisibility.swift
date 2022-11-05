@@ -206,4 +206,49 @@ extension GameViewController // GameObjectEnabilityAndVisibility
         useTrainButton.isHidden = hidden
         useCartButton.isHidden = hidden
     }
+    
+    func priceLabel(hidden: Bool, ID: Int)
+    {
+        stServicePriceLabel.isHidden = hidden
+        stSizePriceLabel.isHidden = hidden
+        let stClass = findStDetails(stationID: ID).0
+        let serviceLevel = stClass.stationFacilityLvl
+        let sizeLevel = stClass.stationSizeLvl
+        stSizePriceLabel.text = String(Int(sizeLevel) * 200)
+        stServicePriceLabel.text = String(Int(serviceLevel) * 200)
+        serviceButton.isEnabled = true
+        serviceButton.isEnabled = true
+    }
+    
+    func stImproveButton(stClass: newStation)
+    {
+        if money <= (200 * stClass.stationFacilityLvl)
+        {
+            serviceButton.isEnabled = false
+        }
+        else
+        {
+            serviceButton.isEnabled = true
+        }
+        if money <= (200 * stClass.stationSizeLvl)
+        {
+            sizeButton.isEnabled = false
+        }
+        else
+        {
+            sizeButton.isEnabled = true
+        }
+    }
+    
+    func starImage(score: Int)
+    {
+        starImage.isHidden = false
+        for i in 2...10
+        {
+            if score == i
+            {
+                starImage.image = UIImage(named:"star\(i)")
+            }
+        }
+    }
 }

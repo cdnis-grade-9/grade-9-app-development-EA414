@@ -11,6 +11,7 @@ import CloudKit
 
 extension GameViewController // handles game buttons
 {
+    
     @IBAction func CentralButton(_ sender: Any)
     {
         let i = newStation.st_central
@@ -28,15 +29,7 @@ extension GameViewController // handles game buttons
         let i = newStation.st_hunghom
         butttonFunc(i: i)
     }
-    
-    @IBAction func exitButton(_ sender: Any)
-    {
-        currentPage = 0
-        menuButtonsVis(hidden: false)
-        useResourcesVis(hidden: true)
-        exitButtonFunction()
-    }
-    
+        
     @IBAction func TaiKooButton(_ sender: Any)
     {
         let i = newStation.st_taikoo
@@ -84,17 +77,75 @@ extension GameViewController // handles game buttons
         butttonFunc(i: i)
     }
     
+    @IBAction func stationSizeAction(_ sender: Any)
+    {
+        let stClass = findStDetails(stationID: menuStationID).0
+        if money <= (200 * stClass.stationSizeLvl)
+        {
+            sizeButton.isEnabled = false
+        }
+        money -= (200 * stClass.stationSizeLvl)
+        stClass.stationSizeLvl += 1
+        stSizePriceLabel.text = String(200 * stClass.stationSizeLvl)
+        if money <= (200 * stClass.stationSizeLvl)
+        {
+            sizeButton.isEnabled = false
+        }
+        UImoneyLabel.text = String(money)
+        // change crowdedness of st.
+        stClass.score += 1
+        starImage(score: stClass.score)
+    }
+    
+    @IBAction func stationServiceAction(_ sender: Any)
+    {
+
+        print("here")
+        let stClass = findStDetails(stationID: menuStationID).0
+        if money <= (200 * stClass.stationFacilityLvl)
+        {
+            serviceButton.isEnabled = false
+        }
+        // change the star image
+        money -= (200 * stClass.stationFacilityLvl)
+        stClass.stationFacilityLvl += 1
+        stServicePriceLabel.text = String(200 * stClass.stationFacilityLvl)
+        if money <= (200 * stClass.stationFacilityLvl)
+        {
+            serviceButton.isEnabled = false
+        }
+        UImoneyLabel.text = String(money)
+        // change income amount
+        stClass.score += 1
+        starImage(score: stClass.score)
+    }
+    
+    @IBAction func exitButton(_ sender: Any)
+    {
+        currentPage = 0
+        stationMenuImage.isHidden = true
+        starImage.isHidden = true
+        priceLabel(hidden: true, ID: currentPage)
+        menuButtonsVis(hidden: false)
+        useResourcesVis(hidden: true)
+        exitButtonFunction()
+    }
     
     func butttonFunc(i: newStation)
     {
+        menuStationID = i.id
         useResourcesMoneyCheck()
         let stButton = findStDetails(stationID: (i.id)).1
         currentPage = Int(i.id)
-        if buttonTask == 0
+        if buttonTask == 0 //load station data
         {
+            starImage(score: i.score)
+            stImproveButton(stClass: i)
+            priceLabel(hidden: false, ID: currentPage)
             useResourcesVis(hidden: false)
             menuButtonsVis(hidden: true)
             loadStation(stationID: i.id)
+            stationMenuImage.isHidden = false
             enabilityOfStations(stID: i.id, enability: false)
             stButton?.isEnabled = false
         }
