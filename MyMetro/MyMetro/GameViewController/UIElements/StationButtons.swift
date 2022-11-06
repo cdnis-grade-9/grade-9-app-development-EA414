@@ -185,6 +185,12 @@ extension GameViewController // handles game buttons
                 addStationOutlet.isHidden = false
                 newStationImage.isHidden = false
                 homeMenuImage.isHidden = false
+                crowdedStLabel.isHidden = false
+                crowdedStProg.isHidden = false
+                yellowLineProg.isHidden = false
+                redLineProg.isHidden = false
+                greenLineProg.isHidden = false
+                blueLineProg.isHidden = false
                 stationUIVisibility(hidden: true)
                 enabilityOfStations(stID: 0, enability: true)
             }

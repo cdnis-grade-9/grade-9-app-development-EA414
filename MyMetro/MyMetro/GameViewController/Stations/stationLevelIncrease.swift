@@ -21,7 +21,6 @@ extension GameViewController
         let image = dataSet.2
         let buttonOutlet = dataSet.1
         let stID = dataSet.0
-        print(stID.id)
         image?.isHidden = false
         buttonOutlet!.isEnabled = true
         unlockedStationsID.append(stID.id)

@@ -94,6 +94,13 @@ class GameViewController: UIViewController {
     @IBOutlet var newLineLayout: UIImageView!
     @IBOutlet var stationMenuImage: UIImageView!
     
+    // home data outlets
+    @IBOutlet var crowdedStProg: UIProgressView!
+    @IBOutlet var crowdedStLabel: UILabel!
+    @IBOutlet var blueLineProg: UIProgressView!
+    @IBOutlet var redLineProg: UIProgressView!
+    @IBOutlet var yellowLineProg: UIProgressView!
+    @IBOutlet var greenLineProg: UIProgressView!
     
     
     //variables
@@ -113,7 +120,7 @@ class GameViewController: UIViewController {
     var currentRound = 0 //either 1 or 2
     var buttonTask = 0 // 0 = show station info, 1 = extend line
     var colorSelected = false // if color is selected
-    var money = 500
+    var money = 5000
     var menuStationID = Int()
     var st1 = String()
     var st2 = String()
@@ -123,6 +130,11 @@ class GameViewController: UIViewController {
     var lineNum = 0
     var unlockedStationsID = [1,2]
     var connectedStationsID = [] as NSMutableArray
+    var blueStationsID = [] as NSMutableArray
+    var redStationsID = [] as NSMutableArray
+    var yellowStationsID = [] as NSMutableArray
+    var greenStationsID = [] as NSMutableArray
+    var mostCrowdedStID = Int()
     var resourceButtonFunc = "buyResources"
     var cartPrice = 150
     var trainPrice = 600
@@ -139,6 +151,8 @@ class GameViewController: UIViewController {
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        UImoneyLabel.text = String(money)
+        updateMenuData()
         runTimer()
     }
 }

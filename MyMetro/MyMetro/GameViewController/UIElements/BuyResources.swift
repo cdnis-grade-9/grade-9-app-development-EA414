@@ -20,6 +20,12 @@ extension GameViewController // this file lets you purchase resources
         addStationOutlet.isHidden = true
         newStationImage.isHidden = true
         homeMenuImage.isHidden = true
+        crowdedStLabel.isHidden = true
+        crowdedStProg.isHidden = true
+        yellowLineProg.isHidden = true
+        redLineProg.isHidden = true
+        greenLineProg.isHidden = true
+        blueLineProg.isHidden = true
         buyResourcesUI(show: true)
     }
     
@@ -41,6 +47,7 @@ extension GameViewController // this file lets you purchase resources
     
     @IBAction func trainBuyButton(_ sender: Any)
     {
+        print("pressed")
         if money >= trainPrice
         {
             trainNum += 1
@@ -48,7 +55,7 @@ extension GameViewController // this file lets you purchase resources
             money -= trainPrice
             UImoneyLabel.text = String(money)
         }
-        if money < trainPrice
+        else if money < trainPrice
         {
             UIbuyTrainButton.isEnabled = false
             print("cant buy train: insufficient funds")
@@ -76,6 +83,12 @@ extension GameViewController // this file lets you purchase resources
         addStationOutlet.isHidden = false
         newStationImage.isHidden = false
         homeMenuImage.isHidden = false
+        crowdedStProg.isHidden = false
+        crowdedStLabel.isHidden = false
+        yellowLineProg.isHidden = false
+        redLineProg.isHidden = false
+        greenLineProg.isHidden = false
+        blueLineProg.isHidden = false
         buyResourcesUI(show: false)
         exitButtonOutlet.isEnabled = true
         enabilityOfStations(stID: 0, enability: true)

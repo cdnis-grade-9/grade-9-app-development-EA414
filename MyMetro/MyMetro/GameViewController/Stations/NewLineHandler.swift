@@ -51,6 +51,12 @@ extension GameViewController // this file adds a new line
         addStationOutlet.isHidden = true
         newStationImage.isHidden = true
         homeMenuImage.isHidden = true
+        crowdedStLabel.isHidden = true
+        crowdedStProg.isHidden = true
+        yellowLineProg.isHidden = true
+        redLineProg.isHidden = true
+        greenLineProg.isHidden = true
+        blueLineProg.isHidden = true
         buttonTask = 1 // sets the button task to extend line
         addStationVisibility(x: false, phase : 1)
         stationUIVisibility(hidden: true)
@@ -81,6 +87,29 @@ extension GameViewController // this file adds a new line
         buyResourceImage.isHidden = false
         incLineArrayByID(st1ID: st1ID, st2ID: st2ID) //increases connected stations
         lineNum += 1
+        
+        // checks for which line this station is added to
+        if GameViewController.newColorLineString == "Red"
+        {
+            redStationsID.add(st1ID)
+            redStationsID.add(st2ID)
+        }
+        else if GameViewController.newColorLineString == "Yellow"
+        {
+            yellowStationsID.add(st1ID)
+            yellowStationsID.add(st2ID)
+        }
+        else if GameViewController.newColorLineString == "Green"
+        {
+            greenStationsID.add(st1ID)
+            greenStationsID.add(st2ID)
+        }
+        else if GameViewController.newColorLineString == "Blue"
+        {
+            blueStationsID.add(st1ID)
+            blueStationsID.add(st2ID)
+        }
+        updateLineCrowdedData()
     }
     
     func resourceManagementLine()

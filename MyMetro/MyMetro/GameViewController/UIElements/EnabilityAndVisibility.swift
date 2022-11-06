@@ -197,6 +197,12 @@ extension GameViewController // GameObjectEnabilityAndVisibility
         addStationOutlet.isHidden = hidden
         newStationImage.isHidden = hidden
         homeMenuImage.isHidden = hidden
+        crowdedStProg.isHidden = hidden
+        crowdedStLabel.isHidden = hidden
+        yellowLineProg.isHidden = hidden
+        redLineProg.isHidden = hidden
+        greenLineProg.isHidden = hidden
+        blueLineProg.isHidden = hidden
     }
     
     func useResourcesVis(hidden: Bool)

@@ -21,6 +21,7 @@ extension GameViewController //this file only handles game time
         {
             increaseDensity() // changes a stations density
             time = 0.00
+            updateMenuData() // changes the menu data
             timeBar.progress = Float(0)
             totalDays += 1
             day += 1

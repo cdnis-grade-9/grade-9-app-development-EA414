@@ -94,10 +94,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="925" height="430"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="homeMenuLayout" translatesAutoresizingMaskIntoConstraints="NO" id="HCO-dL-PP9">
-                                <rect key="frame" x="689" y="6" width="222" height="335"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="HK" translatesAutoresizingMaskIntoConstraints="NO" id="sIP-49-UyZ" propertyAccessControl="all">
                                 <rect key="frame" x="0.0" y="0.0" width="670" height="378"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -447,19 +443,6 @@
                                 <rect key="frame" x="792" y="212" width="27" height="42"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wgd-Hi-7cJ">
-                                <rect key="frame" x="682" y="344" width="113" height="26"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled">
-                                    <color key="baseBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <action selector="buyResourcesButton:" destination="b2U-11-Zpq" eventType="touchUpInside" id="ZEQ-iJ-ng1"/>
-                                </connections>
-                            </button>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="+0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZWZ-JU-zy9" userLabel="incomeLabel">
                                 <rect key="frame" x="49" y="385" width="68" height="12"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -496,6 +479,19 @@
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="useCartButton:" destination="b2U-11-Zpq" eventType="touchUpInside" id="U80-kr-b3E"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wgd-Hi-7cJ">
+                                <rect key="frame" x="682" y="344" width="113" height="26"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled">
+                                    <color key="baseBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="buyResourcesButton:" destination="b2U-11-Zpq" eventType="touchUpInside" id="ZEQ-iJ-ng1"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3ZM-A8-aZz">
@@ -593,24 +589,6 @@
                                 <rect key="frame" x="678" y="11" width="240" height="362"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4ai-I9-VNH" userLabel="UIbuyTrainButton">
-                                <rect key="frame" x="710" y="52" width="176" height="85"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title=" "/>
-                                <connections>
-                                    <action selector="trainBuyButton:" destination="b2U-11-Zpq" eventType="touchUpInside" id="3dc-Gz-JIn"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pam-iP-RcD" userLabel="UIbuyCartButton">
-                                <rect key="frame" x="709" y="53" width="176" height="83"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title=" "/>
-                                <connections>
-                                    <action selector="cartBuyButton:" destination="b2U-11-Zpq" eventType="touchUpInside" id="OCd-yF-A09"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3M4-wy-NEg" userLabel="UIbuyTunnelButton">
                                 <rect key="frame" x="710" y="244" width="176" height="88"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -618,6 +596,24 @@
                                 <buttonConfiguration key="configuration" style="plain" title=" "/>
                                 <connections>
                                     <action selector="buyTunnel:" destination="b2U-11-Zpq" eventType="touchUpInside" id="FJM-CR-ArJ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pam-iP-RcD" userLabel="UIbuyCartButton">
+                                <rect key="frame" x="710" y="52" width="176" height="83"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title=" "/>
+                                <connections>
+                                    <action selector="cartBuyButton:" destination="b2U-11-Zpq" eventType="touchUpInside" id="OCd-yF-A09"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4ai-I9-VNH" userLabel="UIbuyTrainButton">
+                                <rect key="frame" x="712" y="149" width="176" height="85"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title=" "/>
+                                <connections>
+                                    <action selector="trainBuyButton:" destination="b2U-11-Zpq" eventType="touchUpInside" id="3dc-Gz-JIn"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zUr-7g-DmR" userLabel="exitShop">
@@ -687,6 +683,41 @@
                                 <rect key="frame" x="732" y="118" width="147" height="38"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="homeMenuLayout" translatesAutoresizingMaskIntoConstraints="NO" id="HCO-dL-PP9">
+                                <rect key="frame" x="689" y="6" width="222" height="335"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="X station" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ixQ-p1-enR" userLabel="crowdedSt">
+                                <rect key="frame" x="713" y="60" width="167" height="15"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Vhi-gB-j4m" userLabel="crowdedStProg">
+                                <rect key="frame" x="713" y="84" width="167" height="4"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </progressView>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="tWR-JU-NU9" userLabel="BlueLineProgressBar">
+                                <rect key="frame" x="713" y="149" width="166" height="4"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </progressView>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="8Mb-wl-QRi" userLabel="RedLineProgressBar">
+                                <rect key="frame" x="712" y="193" width="166" height="4"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" systemColor="systemRedColor"/>
+                            </progressView>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="lWq-FW-Oj7" userLabel="YellowLineProgressBar">
+                                <rect key="frame" x="712" y="231" width="166" height="4"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="1" green="0.83234566450000003" blue="0.47320586440000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </progressView>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="cfh-QB-xUv" userLabel="GreenLineProgressBar">
+                                <rect key="frame" x="715" y="271" width="166" height="4"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" systemColor="systemGreenColor"/>
+                            </progressView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="hCe-TK-2ly"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -727,17 +758,22 @@
                         <outlet property="WongChukHangButtonOutlet" destination="Wz1-4W-5oJ" id="Gw2-JB-Ozc"/>
                         <outlet property="WongChukHangImage" destination="h5g-qE-ebM" id="PaG-vS-X42"/>
                         <outlet property="addStationOutlet" destination="3ZM-A8-aZz" id="JRb-3K-YOn"/>
+                        <outlet property="blueLineProg" destination="tWR-JU-NU9" id="6yk-We-Vkn"/>
                         <outlet property="buyResourceImage" destination="v4U-qq-Myg" id="mg7-cp-bJe"/>
                         <outlet property="colorLabel" destination="InV-yG-1rB" id="UAv-5b-DbM"/>
                         <outlet property="colorLabelDiff" destination="WGo-Ej-tG0" id="FOe-tm-f4R"/>
+                        <outlet property="crowdedStLabel" destination="ixQ-p1-enR" id="Vcc-gQ-2b8"/>
+                        <outlet property="crowdedStProg" destination="Vhi-gB-j4m" id="7dn-mB-DlD"/>
                         <outlet property="dayLabel" destination="rob-1r-0Qo" id="DQE-hg-lcK"/>
                         <outlet property="downArrowPic" destination="K8P-7Z-nlQ" id="xP5-3u-yO2"/>
                         <outlet property="exitButtonOutlet" destination="9Cx-mR-jDR" id="OvT-cT-ZUH"/>
                         <outlet property="fromStationLabelDiff" destination="Wrx-sm-9dI" id="fRu-2z-e2U"/>
+                        <outlet property="greenLineProg" destination="cfh-QB-xUv" id="EnQ-nk-ADa"/>
                         <outlet property="homeMenuImage" destination="HCO-dL-PP9" id="PxQ-vq-rfz"/>
                         <outlet property="newLineLayout" destination="Tzg-Ua-Z1A" id="ykM-Lc-YB9"/>
                         <outlet property="newStationImage" destination="0tt-oE-eiW" id="CDg-dC-0I6"/>
                         <outlet property="playPic" destination="heB-Yy-DPA" id="hwe-Sz-NX4"/>
+                        <outlet property="redLineProg" destination="8Mb-wl-QRi" id="N6m-3y-fuB"/>
                         <outlet property="serviceButton" destination="yEo-hV-Gfq" id="6m9-v5-J5q"/>
                         <outlet property="shopExitOutlet" destination="zUr-7g-DmR" id="hXh-ds-g7z"/>
                         <outlet property="shopImage" destination="qoz-lS-Q5L" id="g3Z-cA-1HG"/>
@@ -760,6 +796,7 @@
                         <outlet property="useCartImage" destination="Obt-rK-vyj" id="v1f-Iy-s0f"/>
                         <outlet property="useTrainButton" destination="eBH-d9-ZDQ" id="7mI-xn-QMx"/>
                         <outlet property="useTrainImage" destination="EPa-qI-7n7" id="s0g-Zf-qiY"/>
+                        <outlet property="yellowLineProg" destination="lWq-FW-Oj7" id="RBk-Ef-XLU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aq6-qn-2zr" sceneMemberID="firstResponder"/>
@@ -833,6 +870,12 @@
         <image name="tunnel" width="512" height="512"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
