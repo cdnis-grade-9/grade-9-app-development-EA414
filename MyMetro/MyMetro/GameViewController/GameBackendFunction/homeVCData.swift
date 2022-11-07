@@ -44,9 +44,9 @@ extension GameViewController // this file changes the home pages process bar dat
     
     func updateLineCrowdedData()
     {
-        greenLineProg.progress = Float(greenStationsID.count)/10
-        redLineProg.progress = Float(redStationsID.count)/10
-        blueLineProg.progress = Float(blueStationsID.count)/10
-        yellowLineProg.progress = Float(yellowStationsID.count)/10
+        greenLineProg.progress = Float(greenStationsID.count - greenSubtractor)/10
+        redLineProg.progress = Float(redStationsID.count - redSubtractor)/10
+        blueLineProg.progress = Float(blueStationsID.count - blueSubtractor)/10
+        yellowLineProg.progress = Float(yellowStationsID.count - yellowSubtractor)/10
     }
 }

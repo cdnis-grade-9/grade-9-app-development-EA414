@@ -13,7 +13,7 @@ extension GameViewController // this file lets you purchase resources
 {
     @IBAction func buyResourcesButton(_ sender: Any)
     {
-        
+        lineUpgradeButton.isHidden = true
         exitButtonOutlet.isEnabled = false
         exitButtonFunction()
         enabilityOfStations(stID: 0, enability: false)
@@ -86,6 +86,7 @@ extension GameViewController // this file lets you purchase resources
         crowdedStProg.isHidden = false
         crowdedStLabel.isHidden = false
         yellowLineProg.isHidden = false
+        lineUpgradeButton.isHidden = false
         redLineProg.isHidden = false
         greenLineProg.isHidden = false
         blueLineProg.isHidden = false

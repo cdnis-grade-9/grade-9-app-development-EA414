@@ -134,7 +134,6 @@ extension GameViewController // handles game buttons
     func butttonFunc(i: newStation)
     {
         menuStationID = i.id
-        useResourcesMoneyCheck()
         let stButton = findStDetails(stationID: (i.id)).1
         currentPage = Int(i.id)
         if buttonTask == 0 //load station data
@@ -191,6 +190,7 @@ extension GameViewController // handles game buttons
                 redLineProg.isHidden = false
                 greenLineProg.isHidden = false
                 blueLineProg.isHidden = false
+                lineUpgradeButton.isHidden = false
                 stationUIVisibility(hidden: true)
                 enabilityOfStations(stID: 0, enability: true)
             }

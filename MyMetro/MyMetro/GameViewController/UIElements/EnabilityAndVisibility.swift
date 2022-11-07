@@ -14,7 +14,6 @@ extension GameViewController // GameObjectEnabilityAndVisibility
     {
         if phase == 1 // gets the color first
         {
-            stationUILineLabel.isHidden = x
             stationUIGreenLine.isHidden = x
             newLineLayout.isHidden = x
             stationUIBlueButton.isHidden = x
@@ -31,7 +30,6 @@ extension GameViewController // GameObjectEnabilityAndVisibility
         }
         else // hides everything on right UI (making station)
         {
-            stationUILineLabel.isHidden = x
             stationUIGreenLine.isHidden = x
             stationUIBlueButton.isHidden = x
             stationUIRedButton.isHidden = x
@@ -45,12 +43,12 @@ extension GameViewController // GameObjectEnabilityAndVisibility
         }
     }
 
-  func stationUIVisibility(hidden: Bool)
-  {
-      stationUIName.isHidden = hidden
-      stationUIDensityBar.isHidden = hidden
-      stationUICrowdDensity.isHidden = hidden
-  }
+    func stationUIVisibility(hidden: Bool)
+    {
+        stationUIName.isHidden = hidden
+        stationUIDensityBar.isHidden = hidden
+        stationUICrowdDensity.isHidden = hidden
+    }
 
     func findStDetails(stationID: Int) -> (newStation, Optional<UIButton>, Optional<UIImageView>)  // when making new station add smth here
     {
@@ -136,7 +134,7 @@ extension GameViewController // GameObjectEnabilityAndVisibility
         stationUIVisibility(hidden: false)
     }
     
-    func enabilityOfStations(stID: Int, enability: Bool) // when making new station add smth here
+    func enabilityOfStations(stID: Int, enability: Bool) // disables all stations or disables a certain station by station ID
     {
         if stID == 0
         {
@@ -200,6 +198,7 @@ extension GameViewController // GameObjectEnabilityAndVisibility
         crowdedStProg.isHidden = hidden
         crowdedStLabel.isHidden = hidden
         yellowLineProg.isHidden = hidden
+        lineUpgradeButton.isHidden = hidden
         redLineProg.isHidden = hidden
         greenLineProg.isHidden = hidden
         blueLineProg.isHidden = hidden
@@ -207,8 +206,6 @@ extension GameViewController // GameObjectEnabilityAndVisibility
     
     func useResourcesVis(hidden: Bool)
     {
-        useTrainImage.isHidden = hidden
-        useCartImage.isHidden = hidden
         useTrainButton.isHidden = hidden
         useCartButton.isHidden = hidden
     }

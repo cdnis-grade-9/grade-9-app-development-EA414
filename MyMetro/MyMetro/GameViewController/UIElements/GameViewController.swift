@@ -14,8 +14,6 @@ class GameViewController: UIViewController {
     @IBOutlet var stationUIName: UILabel!
     @IBOutlet var stationUICrowdDensity: UILabel!
     @IBOutlet var stationUIDensityBar: UIProgressView!
-    @IBOutlet var useTrainImage: UIImageView!
-    @IBOutlet var useCartImage: UIImageView!
     @IBOutlet var useTrainButton: UIButton!
     @IBOutlet var useCartButton: UIButton!
     @IBOutlet var stSizePriceLabel: UILabel!
@@ -23,7 +21,7 @@ class GameViewController: UIViewController {
     @IBOutlet var sizeButton: UIButton!
     @IBOutlet var serviceButton: UIButton!
     @IBOutlet var starImage: UIImageView!
-    
+
     //Genral Game Outlets
     @IBOutlet var timeBar: UIProgressView!
     @IBOutlet var playPic: UIImageView!
@@ -56,7 +54,6 @@ class GameViewController: UIViewController {
     @IBOutlet var KowloonButtonOutlet: UIButton!
     @IBOutlet var AustinButtonOutlet: UIButton!
     
-    
     //station image outlets
     @IBOutlet var HKUImage: UIImageView!
     @IBOutlet var HungHomImage: UIImageView!
@@ -79,13 +76,11 @@ class GameViewController: UIViewController {
     @IBOutlet var UItunnelLabel: UILabel!
     @IBOutlet var UIcartNumLabel: UILabel!
     @IBOutlet var UItrainNumLabel: UILabel!
-
     
     // resource menu outlets
     @IBOutlet var UIresourceButton: UIButton!
     @IBOutlet var shopExitOutlet: UIButton!
     @IBOutlet var shopImage: UIImageView!
-    
     
     //game button images
     @IBOutlet var buyResourceImage: UIImageView!
@@ -93,6 +88,7 @@ class GameViewController: UIViewController {
     @IBOutlet var homeMenuImage: UIImageView!
     @IBOutlet var newLineLayout: UIImageView!
     @IBOutlet var stationMenuImage: UIImageView!
+    @IBOutlet var lineUpgradeImage: UIImageView!
     
     // home data outlets
     @IBOutlet var crowdedStProg: UIProgressView!
@@ -101,6 +97,16 @@ class GameViewController: UIViewController {
     @IBOutlet var redLineProg: UIProgressView!
     @IBOutlet var yellowLineProg: UIProgressView!
     @IBOutlet var greenLineProg: UIProgressView!
+    
+    // line upgrades
+    @IBOutlet var lineUpgradeButton: UIButton!
+    @IBOutlet var lineUpgradesExit: UIButton!
+    @IBOutlet var upgColorLabel: UILabel!
+    @IBOutlet var redLineUpg: UIButton!
+    @IBOutlet var greenLineUpg: UIButton!
+    @IBOutlet var yellowLineUpg: UIButton!
+    @IBOutlet var blueLineUpg: UIButton!
+    @IBOutlet var lineUpgProgBar: UIProgressView!
     
     
     //variables
@@ -131,11 +137,16 @@ class GameViewController: UIViewController {
     var unlockedStationsID = [1,2]
     var connectedStationsID = [] as NSMutableArray
     var blueStationsID = [] as NSMutableArray
+    var blueSubtractor = Int()
     var redStationsID = [] as NSMutableArray
+    var redSubtractor = Int()
     var yellowStationsID = [] as NSMutableArray
+    var yellowSubtractor = Int()
     var greenStationsID = [] as NSMutableArray
+    var greenSubtractor = Int()
     var mostCrowdedStID = Int()
     var resourceButtonFunc = "buyResources"
+    var currentEditingLine = String()
     var cartPrice = 150
     var trainPrice = 600
     var tunnelPrice = 200

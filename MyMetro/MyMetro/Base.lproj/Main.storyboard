@@ -412,13 +412,6 @@
                                 <rect key="frame" x="545" y="396" width="23" height="23"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Add Station" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sni-Eo-ChJ">
-                                <rect key="frame" x="769" y="24" width="77" height="13"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="13"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CWI-xI-S23">
                                 <rect key="frame" x="784" y="422" width="55" height="4"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -449,38 +442,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                 <color key="textColor" red="0.064436298738667061" green="0.75307765151515149" blue="0.0074885399923171761" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </label>
-                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="train (2)" translatesAutoresizingMaskIntoConstraints="NO" id="EPa-qI-7n7" userLabel="UseTrainImage">
-                                <rect key="frame" x="732" y="127" width="53" height="54"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="PassengerCart" translatesAutoresizingMaskIntoConstraints="NO" id="Obt-rK-vyj" userLabel="UseCartImage">
-                                <rect key="frame" x="826" y="129" width="53" height="54"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eBH-d9-ZDQ" userLabel="UseTrainButton">
-                                <rect key="frame" x="729" y="182" width="58" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" red="0.080210897490000002" green="0.93743798899999997" blue="0.0093218034780000007" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Use">
-                                    <fontDescription key="titleFontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <action selector="useTrainButton:" destination="b2U-11-Zpq" eventType="touchUpInside" id="9wp-Su-sfk"/>
-                                </connections>
-                            </button>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ek1-oy-Mrn" userLabel="UseCartButton">
-                                <rect key="frame" x="825" y="182" width="58" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" red="0.080210897490000002" green="0.93743798899999997" blue="0.0093218034780000007" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Use">
-                                    <fontDescription key="titleFontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <action selector="useCartButton:" destination="b2U-11-Zpq" eventType="touchUpInside" id="U80-kr-b3E"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wgd-Hi-7cJ">
                                 <rect key="frame" x="682" y="344" width="113" height="26"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -589,7 +550,7 @@
                                 <rect key="frame" x="678" y="11" width="240" height="362"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3M4-wy-NEg" userLabel="UIbuyTunnelButton">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3M4-wy-NEg" userLabel="UIbuyTunnelButton">
                                 <rect key="frame" x="710" y="244" width="176" height="88"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
@@ -598,7 +559,7 @@
                                     <action selector="buyTunnel:" destination="b2U-11-Zpq" eventType="touchUpInside" id="FJM-CR-ArJ"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pam-iP-RcD" userLabel="UIbuyCartButton">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pam-iP-RcD" userLabel="UIbuyCartButton">
                                 <rect key="frame" x="710" y="52" width="176" height="83"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
@@ -607,7 +568,7 @@
                                     <action selector="cartBuyButton:" destination="b2U-11-Zpq" eventType="touchUpInside" id="OCd-yF-A09"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4ai-I9-VNH" userLabel="UIbuyTrainButton">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4ai-I9-VNH" userLabel="UIbuyTrainButton">
                                 <rect key="frame" x="712" y="149" width="176" height="85"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
@@ -616,7 +577,7 @@
                                     <action selector="trainBuyButton:" destination="b2U-11-Zpq" eventType="touchUpInside" id="3dc-Gz-JIn"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zUr-7g-DmR" userLabel="exitShop">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zUr-7g-DmR" userLabel="exitShop">
                                 <rect key="frame" x="710" y="339" width="173" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
@@ -718,6 +679,93 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" systemColor="systemGreenColor"/>
                             </progressView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yVY-aP-qZI" userLabel="lineUpgradeButton">
+                                <rect key="frame" x="724" y="288" width="147" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title=""/>
+                                <connections>
+                                    <action selector="lineUpgradeAction:" destination="b2U-11-Zpq" eventType="touchUpInside" id="oLg-oM-TU5"/>
+                                </connections>
+                            </button>
+                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="LineUpgrades" translatesAutoresizingMaskIntoConstraints="NO" id="Oau-OJ-dad">
+                                <rect key="frame" x="683" y="7" width="231" height="368"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cLl-zB-WcO" userLabel="useTrainButton">
+                                <rect key="frame" x="714" y="250" width="67" height="58"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title=""/>
+                                <connections>
+                                    <action selector="useTrainButton:" destination="b2U-11-Zpq" eventType="touchUpInside" id="Y8Y-Q7-M3h"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YeK-mh-jyV" userLabel="useCartButton">
+                                <rect key="frame" x="816" y="250" width="67" height="58"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title=""/>
+                                <connections>
+                                    <action selector="useCartButton:" destination="b2U-11-Zpq" eventType="touchUpInside" id="AcF-VR-uYr"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aBa-Nv-TOU" userLabel="exitLineUpgrades">
+                                <rect key="frame" x="712" y="341" width="174" height="19"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title=""/>
+                                <connections>
+                                    <action selector="lineUpgradesExitAction:" destination="b2U-11-Zpq" eventType="touchUpInside" id="w6M-sE-N2D"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a80-Xq-2bf" userLabel="redLineUpg">
+                                <rect key="frame" x="702" y="76" width="43" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title=""/>
+                                <connections>
+                                    <action selector="redLineUpgAction:" destination="b2U-11-Zpq" eventType="touchUpInside" id="t1b-Oa-vMd"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F0z-Lb-ERN" userLabel="greenLineUpg">
+                                <rect key="frame" x="752" y="76" width="43" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title=""/>
+                                <connections>
+                                    <action selector="greenLineUpgAction:" destination="b2U-11-Zpq" eventType="touchUpInside" id="wY9-bM-8tX"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="28b-TO-r63" userLabel="blueLineUpg">
+                                <rect key="frame" x="803" y="76" width="43" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title=""/>
+                                <connections>
+                                    <action selector="blueLineUpgAction:" destination="b2U-11-Zpq" eventType="touchUpInside" id="UgC-O5-Rzi"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vZj-Vy-ynp" userLabel="yellowLineUpg">
+                                <rect key="frame" x="852" y="76" width="43" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title=""/>
+                                <connections>
+                                    <action selector="yellowLineUpgAction:" destination="b2U-11-Zpq" eventType="touchUpInside" id="rMp-8c-zGC"/>
+                                </connections>
+                            </button>
+                            <progressView hidden="YES" opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="uvK-aA-g7f">
+                                <rect key="frame" x="710" y="182" width="173" height="4"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </progressView>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lSx-Ft-YsD">
+                                <rect key="frame" x="701" y="153" width="193" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="hCe-TK-2ly"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -759,6 +807,7 @@
                         <outlet property="WongChukHangImage" destination="h5g-qE-ebM" id="PaG-vS-X42"/>
                         <outlet property="addStationOutlet" destination="3ZM-A8-aZz" id="JRb-3K-YOn"/>
                         <outlet property="blueLineProg" destination="tWR-JU-NU9" id="6yk-We-Vkn"/>
+                        <outlet property="blueLineUpg" destination="28b-TO-r63" id="ahs-8E-bkc"/>
                         <outlet property="buyResourceImage" destination="v4U-qq-Myg" id="mg7-cp-bJe"/>
                         <outlet property="colorLabel" destination="InV-yG-1rB" id="UAv-5b-DbM"/>
                         <outlet property="colorLabelDiff" destination="WGo-Ej-tG0" id="FOe-tm-f4R"/>
@@ -769,11 +818,17 @@
                         <outlet property="exitButtonOutlet" destination="9Cx-mR-jDR" id="OvT-cT-ZUH"/>
                         <outlet property="fromStationLabelDiff" destination="Wrx-sm-9dI" id="fRu-2z-e2U"/>
                         <outlet property="greenLineProg" destination="cfh-QB-xUv" id="EnQ-nk-ADa"/>
+                        <outlet property="greenLineUpg" destination="F0z-Lb-ERN" id="3td-yo-yz8"/>
                         <outlet property="homeMenuImage" destination="HCO-dL-PP9" id="PxQ-vq-rfz"/>
+                        <outlet property="lineUpgProgBar" destination="uvK-aA-g7f" id="d2k-2u-RU4"/>
+                        <outlet property="lineUpgradeButton" destination="yVY-aP-qZI" id="KKr-4b-1Td"/>
+                        <outlet property="lineUpgradeImage" destination="Oau-OJ-dad" id="lMJ-JI-aiP"/>
+                        <outlet property="lineUpgradesExit" destination="aBa-Nv-TOU" id="9Qy-Eo-xtJ"/>
                         <outlet property="newLineLayout" destination="Tzg-Ua-Z1A" id="ykM-Lc-YB9"/>
                         <outlet property="newStationImage" destination="0tt-oE-eiW" id="CDg-dC-0I6"/>
                         <outlet property="playPic" destination="heB-Yy-DPA" id="hwe-Sz-NX4"/>
                         <outlet property="redLineProg" destination="8Mb-wl-QRi" id="N6m-3y-fuB"/>
+                        <outlet property="redLineUpg" destination="a80-Xq-2bf" id="8Vn-FV-hPb"/>
                         <outlet property="serviceButton" destination="yEo-hV-Gfq" id="6m9-v5-J5q"/>
                         <outlet property="shopExitOutlet" destination="zUr-7g-DmR" id="hXh-ds-g7z"/>
                         <outlet property="shopImage" destination="qoz-lS-Q5L" id="g3Z-cA-1HG"/>
@@ -786,17 +841,16 @@
                         <outlet property="stationUICrowdDensity" destination="IXD-Ec-K6F" id="OkN-fb-3HO"/>
                         <outlet property="stationUIDensityBar" destination="qd9-Yk-05J" id="x1q-Qy-jS8"/>
                         <outlet property="stationUIGreenLine" destination="r0w-Ed-pc8" id="CTy-iC-rpo"/>
-                        <outlet property="stationUILineLabel" destination="Sni-Eo-ChJ" id="6Se-1h-Nmn"/>
                         <outlet property="stationUIName" destination="8dc-3Z-mZD" id="G85-kU-NZp"/>
                         <outlet property="stationUIRedButton" destination="fKO-3o-MaI" id="mym-Wi-F7q"/>
                         <outlet property="stationUIYellowButton" destination="ti5-qL-6sS" id="t9V-bI-8Oo"/>
                         <outlet property="timeBar" destination="CWI-xI-S23" id="cdC-6B-RG2"/>
                         <outlet property="toStationLabelDiff" destination="Ipt-jb-Hdh" id="GFQ-OH-OmD"/>
-                        <outlet property="useCartButton" destination="ek1-oy-Mrn" id="xK5-2X-X0z"/>
-                        <outlet property="useCartImage" destination="Obt-rK-vyj" id="v1f-Iy-s0f"/>
-                        <outlet property="useTrainButton" destination="eBH-d9-ZDQ" id="7mI-xn-QMx"/>
-                        <outlet property="useTrainImage" destination="EPa-qI-7n7" id="s0g-Zf-qiY"/>
+                        <outlet property="upgColorLabel" destination="lSx-Ft-YsD" id="nxr-jC-bPx"/>
+                        <outlet property="useCartButton" destination="YeK-mh-jyV" id="hh1-WG-IDw"/>
+                        <outlet property="useTrainButton" destination="cLl-zB-WcO" id="aJ9-1V-8jG"/>
                         <outlet property="yellowLineProg" destination="lWq-FW-Oj7" id="RBk-Ef-XLU"/>
+                        <outlet property="yellowLineUpg" destination="vZj-Vy-ynp" id="LV2-Uk-Id6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aq6-qn-2zr" sceneMemberID="firstResponder"/>
@@ -844,6 +898,7 @@
         <image name="Circle" width="384" height="397"/>
         <image name="GreenLine" width="1352" height="63"/>
         <image name="HK" width="1200" height="675"/>
+        <image name="LineUpgrades" width="448" height="704"/>
         <image name="Money Icon" width="512" height="512"/>
         <image name="NewStationButton" width="622" height="202"/>
         <image name="Octagon" width="868" height="862"/>

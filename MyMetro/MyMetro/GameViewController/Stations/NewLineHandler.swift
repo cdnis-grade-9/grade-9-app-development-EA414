@@ -57,6 +57,7 @@ extension GameViewController // this file adds a new line
         redLineProg.isHidden = true
         greenLineProg.isHidden = true
         blueLineProg.isHidden = true
+        lineUpgradeButton.isHidden = true
         buttonTask = 1 // sets the button task to extend line
         addStationVisibility(x: false, phase : 1)
         stationUIVisibility(hidden: true)
