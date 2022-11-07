@@ -13,6 +13,7 @@ extension GameViewController // this file lets you purchase resources
 {
     @IBAction func buyResourcesButton(_ sender: Any)
     {
+        // hides all gameobjects unrelated to buying resources to avoid bugs
         lineUpgradeButton.isHidden = true
         exitButtonOutlet.isEnabled = false
         exitButtonFunction()
@@ -31,12 +32,13 @@ extension GameViewController // this file lets you purchase resources
     
     @IBAction func cartBuyButton(_ sender: Any)
     {
-        if money >= cartPrice
+        // first determines if you have enough money to buy
+        if money >= cartPrice // if you have enough money
         {
-            cartNum += 1
-            UIcartNumLabel.text = String(cartNum)
-            money -= cartPrice
-            UImoneyLabel.text = String(money)
+            cartNum += 1 // cartnum var goes up
+            UIcartNumLabel.text = String(cartNum) // updates the labels
+            money -= cartPrice // changes money
+            UImoneyLabel.text = String(money) // updates money label
         }
         if money < cartPrice
         {
@@ -47,7 +49,7 @@ extension GameViewController // this file lets you purchase resources
     
     @IBAction func trainBuyButton(_ sender: Any)
     {
-        print("pressed")
+        // same as above but with a different price and diff item
         if money >= trainPrice
         {
             trainNum += 1
@@ -64,6 +66,7 @@ extension GameViewController // this file lets you purchase resources
     
     @IBAction func buyTunnel(_ sender: Any)
     {
+        // same as above but with a different price and diff item
         if money >= tunnelPrice
         {
             tunnelNum += 1
@@ -80,6 +83,7 @@ extension GameViewController // this file lets you purchase resources
     
     @IBAction func shopExitButton(_ sender: Any)
     {
+        // reenables all gameobjects unrelated to buying resources to avoid bugs
         addStationOutlet.isHidden = false
         newStationImage.isHidden = false
         homeMenuImage.isHidden = false

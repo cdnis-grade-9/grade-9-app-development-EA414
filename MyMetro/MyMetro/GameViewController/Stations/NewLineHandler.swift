@@ -10,13 +10,15 @@ import UIKit
 
 extension GameViewController // this file adds a new line
 {
+    
+    // the code below will help determine which color is pressed when determining which line color will be used to draw the line
     @IBAction func GreenColorLine(_ sender: Any)
     {
-        GameViewController.newColorLine = UIColor.green
+        GameViewController.newColorLine = UIColor.green // changes the color selected to that later on the machine knows which color you selected
         GameViewController.newColorLineString = "Green"
         colorLabelDiff.text = GameViewController.newColorLineString
         colorSelected = true
-        addStationVisibility(x: false, phase : 2)
+        addStationVisibility(x: false, phase : 2) // enters the 2nd phase of line drawing
     }
     @IBAction func RedColorLine(_ sender: Any)
     {
@@ -43,8 +45,9 @@ extension GameViewController // this file adds a new line
         addStationVisibility(x: false, phase : 2)
     }
     
-    @IBAction func addStation(_ sender: Any)
+    @IBAction func addStation(_ sender: Any) // adds a new station
     {
+        // -- simple UI updates --
         UIresourceButton.isHidden = true
         buyResourceImage.isHidden = true
         exitButtonOutlet.isEnabled = false
@@ -58,7 +61,9 @@ extension GameViewController // this file adds a new line
         greenLineProg.isHidden = true
         blueLineProg.isHidden = true
         lineUpgradeButton.isHidden = true
-        buttonTask = 1 // sets the button task to extend line
+        
+        // -- functions --
+        buttonTask = 1 // sets the button task to extend line, so that you can use the same buttons on the left for different tasks
         addStationVisibility(x: false, phase : 1)
         stationUIVisibility(hidden: true)
     }
@@ -76,18 +81,21 @@ extension GameViewController // this file adds a new line
             shapeLayer.lineDashPattern = [7, 3]
             tunnelNum -= 1
         }
+        // --  below changes the line formatting --
         shapeLayer.strokeColor = colorID.cgColor
         shapeLayer.path = path.cgPath
         shapeLayer.lineWidth = 8.0
         view.layer.insertSublayer(shapeLayer, at: 2)
+        
+        // -- below resets a few things --
         exitButtonOutlet.isEnabled = true
-        buttonTask = 0
-        resourceManagementLine()
-        buildSFX()
+        buttonTask = 0 // resets the button tasks
+        resourceManagementLine() // updates money and resrouce amount labels on the bottom of the screen
+        buildSFX() //plays a building sfx
         UIresourceButton.isHidden = false
         buyResourceImage.isHidden = false
         incLineArrayByID(st1ID: st1ID, st2ID: st2ID) //increases connected stations
-        lineNum += 1
+        lineNum += 1 // increases the line no. for income purposes
         
         // checks for which line this station is added to
         if GameViewController.newColorLineString == "Red"
@@ -123,6 +131,7 @@ extension GameViewController // this file adds a new line
     
     func checkForTunnel() -> Bool
     {
+        // if the two stations are on the same island (stored in the station class), then the use of tunnels will be false, and if the the stations are on different islands, the use of tunnels will be true
         if st1 == st2
         {
             return false
@@ -139,6 +148,7 @@ extension GameViewController // this file adds a new line
 
     func incLineArrayByID(st1ID: Int, st2ID: Int)
     {
+        // if the line currently does not have that station in its storage of stations, it will be added here
         if connectedStationsID.contains(st1ID)
         {
         }

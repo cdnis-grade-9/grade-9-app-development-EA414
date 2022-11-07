@@ -6,7 +6,7 @@
 //
 
 import Foundation
-class newStation
+class newStation // a class file to store every stations data
 {
     var name: String
     var crowdedness: Float

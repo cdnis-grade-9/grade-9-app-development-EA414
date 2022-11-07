@@ -392,19 +392,19 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Pale Star" translatesAutoresizingMaskIntoConstraints="NO" id="hdR-By-iC3" userLabel="star5">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="fadedStar" translatesAutoresizingMaskIntoConstraints="NO" id="hdR-By-iC3" userLabel="star5">
                                 <rect key="frame" x="655" y="396" width="23" height="23"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Pale Star" translatesAutoresizingMaskIntoConstraints="NO" id="Qtk-jw-eta" userLabel="star4">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="fadedStar" translatesAutoresizingMaskIntoConstraints="NO" id="Qtk-jw-eta" userLabel="star4">
                                 <rect key="frame" x="628" y="396" width="23" height="23"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Pale Star" translatesAutoresizingMaskIntoConstraints="NO" id="GmY-Zj-agF" userLabel="star3">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="fadedStar" translatesAutoresizingMaskIntoConstraints="NO" id="GmY-Zj-agF" userLabel="star3">
                                 <rect key="frame" x="600" y="396" width="23" height="23"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Pale Star" translatesAutoresizingMaskIntoConstraints="NO" id="MpN-qP-30J" userLabel="star2">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="fadedStar" translatesAutoresizingMaskIntoConstraints="NO" id="MpN-qP-30J" userLabel="star2">
                                 <rect key="frame" x="572" y="396" width="23" height="23"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -835,6 +835,11 @@
                         <outlet property="sizeButton" destination="LM0-7H-meB" id="AWV-84-1hV"/>
                         <outlet property="stServicePriceLabel" destination="vIx-rM-0kM" id="DoX-Ji-0RM"/>
                         <outlet property="stSizePriceLabel" destination="8EC-mb-mxb" id="8N3-nV-IHq"/>
+                        <outlet property="star1" destination="zbT-v0-Fh7" id="NTe-Ay-QjZ"/>
+                        <outlet property="star2" destination="MpN-qP-30J" id="ICo-E3-oYg"/>
+                        <outlet property="star3" destination="GmY-Zj-agF" id="Qot-vR-xAc"/>
+                        <outlet property="star4" destination="Qtk-jw-eta" id="dta-sN-0Nc"/>
+                        <outlet property="star5" destination="hdR-By-iC3" id="FCe-LE-5Hu"/>
                         <outlet property="starImage" destination="pYO-SW-5Fr" id="wNI-eI-MJh"/>
                         <outlet property="stationMenuImage" destination="BFn-a0-Fmq" id="YI0-ol-WDE"/>
                         <outlet property="stationUIBlueButton" destination="fpB-qw-E05" id="GNZ-uc-cfT"/>
@@ -902,7 +907,6 @@
         <image name="Money Icon" width="512" height="512"/>
         <image name="NewStationButton" width="622" height="202"/>
         <image name="Octagon" width="868" height="862"/>
-        <image name="Pale Star" width="600" height="597"/>
         <image name="PassengerCart" width="512" height="512"/>
         <image name="Screenshot 2022-09-01 at 11.15.30 AM" width="1052" height="374"/>
         <image name="Shop" width="556" height="840"/>
@@ -912,6 +916,7 @@
         <image name="Triangle" width="158" height="147"/>
         <image name="clock" width="512" height="512"/>
         <image name="downArrow" width="512" height="512"/>
+        <image name="fadedStar" width="190" height="196"/>
         <image name="homeMenuLayout" width="528" height="756"/>
         <image name="info" width="512" height="512"/>
         <image name="mainmenu" width="964" height="708"/>

@@ -26,10 +26,14 @@ class GameViewController: UIViewController {
     @IBOutlet var timeBar: UIProgressView!
     @IBOutlet var playPic: UIImageView!
     @IBOutlet var dayLabel: UILabel!
-
+    @IBOutlet var star1: UIImageView!
+    @IBOutlet var star2: UIImageView!
+    @IBOutlet var star3: UIImageView!
+    @IBOutlet var star4: UIImageView!
+    @IBOutlet var star5: UIImageView!
+    
     //New station UI outlets
     @IBOutlet var addStationOutlet: UIButton!
-    @IBOutlet var stationUILineLabel: UILabel!
     @IBOutlet var stationUIGreenLine: UIButton!
     @IBOutlet var stationUIBlueButton: UIButton!
     @IBOutlet var stationUIYellowButton: UIButton!
@@ -116,7 +120,7 @@ class GameViewController: UIViewController {
     var day = 1
     var infloop = true
     var totalDays = 1
-    var currentPage = 0
+    var menuStationID = 0
     var startStID = Int()
     var endStID = Int()
     var firstX = Int()
@@ -126,8 +130,7 @@ class GameViewController: UIViewController {
     var currentRound = 0 //either 1 or 2
     var buttonTask = 0 // 0 = show station info, 1 = extend line
     var colorSelected = false // if color is selected
-    var money = 5000
-    var menuStationID = Int()
+    var money = 500000
     var st1 = String()
     var st2 = String()
     var tunnelNum = 2
@@ -145,6 +148,8 @@ class GameViewController: UIViewController {
     var greenStationsID = [] as NSMutableArray
     var greenSubtractor = Int()
     var mostCrowdedStID = Int()
+    var avgScoreArray = [] as NSMutableArray
+    var currentAvgNum = 0
     var resourceButtonFunc = "buyResources"
     var currentEditingLine = String()
     var cartPrice = 150

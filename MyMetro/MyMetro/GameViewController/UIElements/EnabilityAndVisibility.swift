@@ -10,9 +10,9 @@ import UIKit
 
 extension GameViewController // GameObjectEnabilityAndVisibility
 {
-    func addStationVisibility(x: Bool, phase: Int)
+    func addStationVisibility(x: Bool, phase: Int) // updates visibility and enability of gameobjects when you make a new line
     {
-        if phase == 1 // gets the color first
+        if phase == 1 // gets the color first, enables the gameobjects related to the color
         {
             stationUIGreenLine.isHidden = x
             newLineLayout.isHidden = x
@@ -22,13 +22,13 @@ extension GameViewController // GameObjectEnabilityAndVisibility
             colorLabelDiff.isHidden = x
             colorLabel.isHidden = x
         }
-        if phase == 2 // then gets the loc of two buttons
+        if phase == 2 // unlocks the things related to getting the loc of the two stations
         {
             downArrowPic.isHidden = x
             fromStationLabelDiff.isHidden = x
             toStationLabelDiff.isHidden = x
         }
-        else // hides everything on right UI (making station)
+        else // changes everything
         {
             stationUIGreenLine.isHidden = x
             stationUIBlueButton.isHidden = x
@@ -40,21 +40,25 @@ extension GameViewController // GameObjectEnabilityAndVisibility
             newLineLayout.isHidden = x
             fromStationLabelDiff.isHidden = x
             toStationLabelDiff.isHidden = x
+            lineUpgradeButton.isHidden = x
         }
     }
 
-    func stationUIVisibility(hidden: Bool)
+    func stationUIVisibility(hidden: Bool) // when this function is called, all the stationUI related items are hidden/not hidden depending on what you put in
     {
         stationUIName.isHidden = hidden
         stationUIDensityBar.isHidden = hidden
         stationUICrowdDensity.isHidden = hidden
     }
 
-    func findStDetails(stationID: Int) -> (newStation, Optional<UIButton>, Optional<UIImageView>)  // when making new station add smth here
+    func findStDetails(stationID: Int) -> (newStation, Optional<UIButton>, Optional<UIImageView>)  // uses the station id (int) to return station details, ie: station image, station class, station button
     {
+        // -- default data --
         var classVar = newStation.st_central
         var labelVar = CentralButtonOutlet
         var imageVar = HungHomImage
+        
+        // -- switch case to get station data --
         switch stationID {
         case 0: // Reset UI
             print("ERROR: NULL(CASE 0) - NO CLASS - RETURNING ID 1")
@@ -109,10 +113,10 @@ extension GameViewController // GameObjectEnabilityAndVisibility
             print("ERROR: NULL(DEFAULT) - NO CLASS - RETURNING ID 1")
         }
 //        print(type(of: imageVar))
-        return (classVar, labelVar, imageVar)
+        return (classVar, labelVar, imageVar) // returns data back to the sender
     }
     
-    func loadProgressView(stationID: Int)
+    func loadProgressView(stationID: Int) // loads the progress view based on the stationID implemented, will be used when finding the station with the highest crowdedness and updating it with this funciton and passing the perameters of the station ID
     {
         let stClass = findStDetails(stationID: Int(stationID)).0
         stationUIDensityBar.progress = Float(stClass.crowdedness)/10
@@ -121,17 +125,17 @@ extension GameViewController // GameObjectEnabilityAndVisibility
     func loadStation(stationID: Int) // loads a station UI detail on right
     {
         enabilityOfStations(stID: 0, enability: true) // all buttons are enabled, self is disabled to avoid double clicking the same button and crashing
-        let stClass = findStDetails(stationID: Int(stationID)).0
+        let stClass = findStDetails(stationID: Int(stationID)).0 // grabs the class based on the station id param
         if stationID == 0
         {
-            stationUIVisibility(hidden: true)
+            stationUIVisibility(hidden: true) // show/hides gameobejects related to the station menu screen
         }
         else
         {
-            stationUIName.text = stClass.name
-            loadProgressView(stationID: stationID)
+            stationUIName.text = stClass.name // updates the station name of the label to the current station name
+            loadProgressView(stationID: stationID) // loads the station crowdedness
         }
-        stationUIVisibility(hidden: false)
+        stationUIVisibility(hidden: false) // show/hides gameobejects related to the station menu screen
     }
     
     func enabilityOfStations(stID: Int, enability: Bool) // disables all stations or disables a certain station by station ID
@@ -151,7 +155,7 @@ extension GameViewController // GameObjectEnabilityAndVisibility
         }
     }
     
-    func buyResourcesUI(show: Bool)
+    func buyResourcesUI(show: Bool) // all the shop related gameobejects will be hidden/not hidden based on the perameters passed
     {
         var hiddenVar = false
         if show == true
@@ -183,12 +187,12 @@ extension GameViewController // GameObjectEnabilityAndVisibility
     
     func exitButtonFunction()
     {
-        stationUIVisibility(hidden: true)
-        enabilityOfStations(stID: 0, enability: true)
-        buttonTask = 0
+        stationUIVisibility(hidden: true) // hides all the UI related to the station info
+        enabilityOfStations(stID: 0, enability: true) // renables all the station buttons
+        buttonTask = 0 // resets the button task
     }
     
-    func menuButtonsVis(hidden: Bool)
+    func menuButtonsVis(hidden: Bool) // hides the buttons on the home menu screen with the params passed
     {
         UIresourceButton.isHidden = hidden
         buyResourceImage.isHidden = hidden
@@ -204,27 +208,28 @@ extension GameViewController // GameObjectEnabilityAndVisibility
         blueLineProg.isHidden = hidden
     }
     
-    func useResourcesVis(hidden: Bool)
+    func useResourcesVis(hidden: Bool) // hides the buttons on the use resource screen with the params passed
     {
         useTrainButton.isHidden = hidden
         useCartButton.isHidden = hidden
     }
     
-    func priceLabel(hidden: Bool, ID: Int)
+    func priceLabel(hidden: Bool, ID: Int) // updates the price label of each stations "increase size" button and "improve facility" button
     {
         stServicePriceLabel.isHidden = hidden
         stSizePriceLabel.isHidden = hidden
-        let stClass = findStDetails(stationID: ID).0
-        let serviceLevel = stClass.stationFacilityLvl
-        let sizeLevel = stClass.stationSizeLvl
-        stSizePriceLabel.text = String(Int(sizeLevel) * 200)
-        stServicePriceLabel.text = String(Int(serviceLevel) * 200)
+        let stClass = findStDetails(stationID: ID).0 // grabs the station class based on the int param
+        let serviceLevel = stClass.stationFacilityLvl // grabs the service level stored in the stations class
+        let sizeLevel = stClass.stationSizeLvl // grabs the size level stored in the class
+        stSizePriceLabel.text = String(Int(sizeLevel) * 200) // updates text based on the size level
+        stServicePriceLabel.text = String(Int(serviceLevel) * 200)// updates text based on the facility level
         serviceButton.isEnabled = true
         serviceButton.isEnabled = true
     }
     
-    func stImproveButton(stClass: newStation)
+    func stImproveButton(stClass: newStation) // checks if you have enough money to buy the improvements, to avoid bugs
     {
+        // below is simple if statement conditions to determine if you have enough money to buy the upgrades
         if money <= (200 * stClass.stationFacilityLvl)
         {
             serviceButton.isEnabled = false
@@ -243,12 +248,12 @@ extension GameViewController // GameObjectEnabilityAndVisibility
         }
     }
     
-    func starImage(score: Int)
+    func starImage(score: Int) // updates the star image rating on any stations data screen, with the params being the score
     {
-        starImage.isHidden = false
-        for i in 2...10
+        starImage.isHidden = false // unhides the star image
+        for i in 2...10 // runs from 2-10, to see which score is your score without using 10 if statements
         {
-            if score == i
+            if score == i // if the current loop is on your score, the star image will update to show your score in stars.
             {
                 starImage.image = UIImage(named:"star\(i)")
             }
