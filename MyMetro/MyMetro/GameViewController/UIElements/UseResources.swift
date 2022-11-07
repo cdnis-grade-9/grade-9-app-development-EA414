@@ -13,14 +13,15 @@ extension GameViewController
     
     @IBAction func yellowLineUpgAction(_ sender: Any)
     {
-        currentEditingLine = "Yellow"
-        upgColorLabel.text = "Yellow Line Crowdedness:"
-        lineUpgProgBar.tintColor = UIColor.yellow
-        lineUpgProgBar.progress = Float(yellowStationsID.count - yellowSubtractor)/10
+        currentEditingLine = "Yellow" // changes the current editing line so that the machine knows what to edit later on
+        upgColorLabel.text = "Yellow Line Crowdedness:" // changes the current editing line label for user refrence
+        lineUpgProgBar.tintColor = UIColor.yellow // changes the progress bar color to the current editing color
+        lineUpgProgBar.progress = Float(yellowStationsID.count - yellowSubtractor)/10 // changes the progress bar value to the line color
     }
     
     @IBAction func redLineUpgAction(_ sender: Any)
     {
+        // same as the above
         currentEditingLine = "Red"
         upgColorLabel.text = "Red Line Crowdedness:"
         lineUpgProgBar.tintColor = UIColor.red
@@ -29,6 +30,7 @@ extension GameViewController
     
     @IBAction func greenLineUpgAction(_ sender: Any)
     {
+        // same as the above
         currentEditingLine = "Green"
         upgColorLabel.text = "Green Line Crowdedness:"
         lineUpgProgBar.tintColor = UIColor.green
@@ -38,6 +40,7 @@ extension GameViewController
     
     @IBAction func blueLineUpgAction(_ sender: Any)
     {
+        // same as the above
         currentEditingLine = "Blue"
         upgColorLabel.text = "Blue Line Crowdedness:"
         lineUpgProgBar.tintColor = UIColor.blue
@@ -77,7 +80,7 @@ extension GameViewController
         updateMenuData() // changes the progress bars on the menu screen to the updated one
     }
     
-    @IBAction func lineUpgradeAction(_ sender: Any)
+    @IBAction func lineUpgradeAction(_ sender: Any) // a lot of hiding and unhiding when pressing the line upgrades button
     {
         enabilityOfStations(stID: 0, enability: false) // disables all the station buttons to avoid bugs
         upgColorLabel.text = "Select Line Color"
@@ -114,15 +117,16 @@ extension GameViewController
     
     @IBAction func useTrainButton(_ sender: Any)
     {
-        updateLineCrowdedData()
-        trainNum -= 1
-        useResourcesCheck()
-        updateResourceUI()
-        changeLine(chg: 5)
+        updateLineCrowdedData() // changes the line crowdedness data
+        trainNum -= 1 // decreases current number of trains
+        useResourcesCheck() // check resources to see if you have any left
+        updateResourceUI()  // changes the labels on the bottom of the screen
+        changeLine(chg: 5) // changes the line density by -5
     }
     
     @IBAction func useCartButton(_ sender: Any)
     {
+        // same as the above
         updateLineCrowdedData()
         cartNum -= 1
         useResourcesCheck()
@@ -132,6 +136,7 @@ extension GameViewController
     
     func useResourcesCheck()
     {
+        // if you are out of resources, the button gets disabled
         if cartNum <= 0
         {
             useCartButton.isEnabled = false
@@ -144,6 +149,7 @@ extension GameViewController
     
     func changeLine(chg: Int)
     {
+        // changes the subtractor for each line (so the game knows how many boosts you have purchased), and updates the progress bar in the main menu
         if currentEditingLine == "Red"
         {
             redSubtractor += chg
