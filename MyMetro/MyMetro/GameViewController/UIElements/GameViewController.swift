@@ -44,7 +44,7 @@ class GameViewController: UIViewController {
     @IBOutlet var toStationLabelDiff: UILabel!
     @IBOutlet var downArrowPic: UIImageView!
     
-    //station outlets
+    //station outlets (these will have upper camel case as they are station names)
     @IBOutlet var AdmiraltyButtonOutlet: UIButton!
     @IBOutlet var CentralButtonOutlet: UIButton!
     @IBOutlet var HungHomButtonOutlet: UIButton!
@@ -58,7 +58,7 @@ class GameViewController: UIViewController {
     @IBOutlet var KowloonButtonOutlet: UIButton!
     @IBOutlet var AustinButtonOutlet: UIButton!
     
-    //station image outlets
+    //station image outlets (these will have upper camel case as they are station names)
     @IBOutlet var HKUImage: UIImageView!
     @IBOutlet var HungHomImage: UIImageView!
     @IBOutlet var exitButtonOutlet: UIButton!
@@ -72,17 +72,17 @@ class GameViewController: UIViewController {
     @IBOutlet var KowloonImage: UIImageView!
     
     // resource outlets bottom
-    @IBOutlet var UIbuyCartButton: UIButton!
-    @IBOutlet var UIbuyTrainButton: UIButton!
-    @IBOutlet var UIBuyTunnelButton: UIButton!
-    @IBOutlet var UImoneyLabel: UILabel!
-    @IBOutlet var UIIncomeLabel: UILabel!
-    @IBOutlet var UItunnelLabel: UILabel!
-    @IBOutlet var UIcartNumLabel: UILabel!
-    @IBOutlet var UItrainNumLabel: UILabel!
+    @IBOutlet var uiBuyCartButton: UIButton!
+    @IBOutlet var uiBuyTrainButton: UIButton!
+    @IBOutlet var uiBuyTunnelButton: UIButton!
+    @IBOutlet var uiMoneyLabel: UILabel!
+    @IBOutlet var uiIncomeLabel: UILabel!
+    @IBOutlet var uiTunnelLabel: UILabel!
+    @IBOutlet var uiCartNumLabel: UILabel!
+    @IBOutlet var uiTrainNumLabel: UILabel!
     
     // resource menu outlets
-    @IBOutlet var UIresourceButton: UIButton!
+    @IBOutlet var UIresourceButton: UIButton! // i tried to refractor-rename this but it crashed every time so assume this is lower camel case
     @IBOutlet var shopExitOutlet: UIButton!
     @IBOutlet var shopImage: UIImageView!
     
@@ -150,6 +150,7 @@ class GameViewController: UIViewController {
     var mostCrowdedStID = Int()
     var avgScoreArray = [] as NSMutableArray
     var currentAvgNum = 0
+    var maxedSt = [] as NSMutableArray
     var resourceButtonFunc = "buyResources"
     var currentEditingLine = String()
     var cartPrice = 150
@@ -167,7 +168,7 @@ class GameViewController: UIViewController {
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        UImoneyLabel.text = String(money)
+        uiMoneyLabel.text = String(money)
         updateMenuData()
         runTimer()
     }

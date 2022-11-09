@@ -36,13 +36,13 @@ extension GameViewController // this file lets you purchase resources
         if money >= cartPrice // if you have enough money
         {
             cartNum += 1 // cartnum var goes up
-            UIcartNumLabel.text = String(cartNum) // updates the labels
+            uiCartNumLabel.text = String(cartNum) // updates the labels
             money -= cartPrice // changes money
-            UImoneyLabel.text = String(money) // updates money label
+            uiMoneyLabel.text = String(money) // updates money label
         }
         if money < cartPrice
         {
-            UIbuyCartButton.isEnabled = false
+            uiBuyCartButton.isEnabled = false
             print("cant buy cart: insufficient funds")
         }
     }
@@ -53,13 +53,13 @@ extension GameViewController // this file lets you purchase resources
         if money >= trainPrice
         {
             trainNum += 1
-            UItrainNumLabel.text = String(trainNum)
+            uiTrainNumLabel.text = String(trainNum)
             money -= trainPrice
-            UImoneyLabel.text = String(money)
+            uiMoneyLabel.text = String(money)
         }
         else if money < trainPrice
         {
-            UIbuyTrainButton.isEnabled = false
+            uiBuyTrainButton.isEnabled = false
             print("cant buy train: insufficient funds")
         }
     }
@@ -70,13 +70,13 @@ extension GameViewController // this file lets you purchase resources
         if money >= tunnelPrice
         {
             tunnelNum += 1
-            UItunnelLabel.text = String(tunnelNum)
+            uiTunnelLabel.text = String(tunnelNum)
             money -= tunnelPrice
-            UImoneyLabel.text = String(money)
+            uiMoneyLabel.text = String(money)
         }
         if money < tunnelPrice
         {
-            UIBuyTunnelButton.isEnabled = false
+            uiBuyTunnelButton.isEnabled = false
             print("cant buy tunnel: insufficient funds")
         }
     }

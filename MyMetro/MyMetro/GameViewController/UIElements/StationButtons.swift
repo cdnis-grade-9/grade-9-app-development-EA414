@@ -16,66 +16,66 @@ extension GameViewController // handles game buttons
     
     @IBAction func CentralButton(_ sender: Any) // example code
     {
-        let i = newStation.st_central // setting the class for this station
+        let i = stationClass.st_central // setting the class for this station
         butttonFunc(i: i) // when this button is pressed, all I need to do is pass the class and it will function normally, as it only needs the class.
     }
     @IBAction func AdmiraltyButton(_ sender: Any)
     {
-        let i = newStation.st_admiralty // using i here as it simplifies code when copying and pasting
+        let i = stationClass.st_admiralty // using i here as it simplifies code when copying and pasting
         butttonFunc(i: i)
         
     }
     
     @IBAction func HungHumButton(_ sender: Any)
     {
-        let i = newStation.st_hunghom
+        let i = stationClass.st_hunghom
         butttonFunc(i: i)
     }
         
     @IBAction func TaiKooButton(_ sender: Any)
     {
-        let i = newStation.st_taikoo
+        let i = stationClass.st_taikoo
         butttonFunc(i: i)
     }
     @IBAction func ChaiWanButton(_ sender: Any)
     {
-        let i = newStation.st_chaiwan
+        let i = stationClass.st_chaiwan
         butttonFunc(i: i)
     }
     @IBAction func HKUButton(_ sender: Any)
     {
-        let i = newStation.st_hku
+        let i = stationClass.st_hku
         butttonFunc(i: i)
     }
     @IBAction func WongChukHangButton(_ sender: Any)
     {
-        let i = newStation.st_wongchukhang
+        let i = stationClass.st_wongchukhang
         butttonFunc(i: i)
     }
     @IBAction func causewayBayButton(_ sender: Any)
     {
-        let i = newStation.st_causewaybay
+        let i = stationClass.st_causewaybay
         butttonFunc(i: i)
     }
     
     @IBAction func KowloonButton(_ sender: Any)
     {
-        let i = newStation.st_kowloon
+        let i = stationClass.st_kowloon
         butttonFunc(i: i)
     }
     @IBAction func TSTButton(_ sender: Any)
     {
-        let i = newStation.st_tst
+        let i = stationClass.st_tst
         butttonFunc(i: i)
     }
     @IBAction func AustinButton(_ sender: Any)
     {
-        let i = newStation.st_austin
+        let i = stationClass.st_austin
         butttonFunc(i: i)
     }
     @IBAction func WhampoaButton(_ sender: Any)
     {
-        let i = newStation.st_whampoa
+        let i = stationClass.st_whampoa
         butttonFunc(i: i)
     }
     
@@ -83,11 +83,8 @@ extension GameViewController // handles game buttons
     {
         let stClass = findStDetails(stationID: menuStationID).0 // gets the class of the current station you are working on
         stClass.score = stClass.stationSizeLvl + stClass.stationFacilityLvl // updates the score of the station through its class
-        if stClass.stationSizeLvl == 5 // if station size level is max, then it will max out and stop you from buying the item
-        {
-            sizeButton.isEnabled = false
-            stSizePriceLabel.text = "Max"
-        }
+        stClass.crowdedness -= 3 // this will subtract the station crowdedness
+        loadProgressView(stationID: stClass.id)
         if money <= (200 * stClass.stationSizeLvl) // if you dont have enough money, the size button will not be enabled
         {
             sizeButton.isEnabled = false
@@ -99,27 +96,26 @@ extension GameViewController // handles game buttons
         {
             sizeButton.isEnabled = false
         }
-        UImoneyLabel.text = String(money)
+        uiMoneyLabel.text = String(money)
         // change crowdedness of st.
         stClass.score = stClass.stationSizeLvl + stClass.stationFacilityLvl // updates the score of the station through its class
         starImage(score: stClass.score)
-        if stClass.stationSizeLvl == 5 // if station size level is max, then it will max out and stop you from buying the item
+        if stClass.stationSizeLvl >= 5 // if station size level is max, then it will max out and stop you from buying the item
         {
+            stClass.crowdedness = 0 // if you max you the station, the station can no longer increase in crowdedness.
             sizeButton.isEnabled = false
             stSizePriceLabel.text = "Max"
+            let id = stClass.id
+            maxedSt.add(id)
         }
         updateStars() // updates stars on the bottom of the UI
+        updateMenuData()
     }
     
     @IBAction func stationServiceAction(_ sender: Any) // this button is the same as the station size button above, except with the station facility and not size
     {
         let stClass = findStDetails(stationID: menuStationID).0
         stClass.score = stClass.stationSizeLvl + stClass.stationFacilityLvl // updates the score of the station through its class
-        if stClass.stationFacilityLvl == 5 // if station service level is max, then it will max out and stop you from buying the item, and make UI changes
-        {
-            serviceButton.isEnabled = false
-            stServicePriceLabel.text = "Max"
-        }
         if money <= (200 * stClass.stationFacilityLvl)
         {
             serviceButton.isEnabled = false
@@ -132,16 +128,17 @@ extension GameViewController // handles game buttons
         {
             serviceButton.isEnabled = false
         }
-        UImoneyLabel.text = String(money)
+        uiMoneyLabel.text = String(money)
         // change income amount
         stClass.score = stClass.stationSizeLvl + stClass.stationFacilityLvl // updates the score of the station through its class
         starImage(score: stClass.score)
-        if stClass.stationFacilityLvl == 5 // if station service level is max, then it will max out and stop you from buying the item, and make UI changes
+        if stClass.stationFacilityLvl >= 5 // if station service level is max, then it will max out and stop you from buying the item, and make UI changes
         {
             serviceButton.isEnabled = false
             stServicePriceLabel.text = "Max"
         }
         updateStars() // updates stars on the bottom of the UI
+        updateMenuData()
     }
     
     @IBAction func exitButton(_ sender: Any) // resets everything (visability and enability) of gameobjects to avoid bugs. Most of the code is simplified in functions to reuse.
@@ -155,18 +152,39 @@ extension GameViewController // handles game buttons
         exitButtonFunction()
     }
     
-    func butttonFunc(i: newStation) // general function that all station buttons follow
+    func butttonFunc(i: stationClass) // general function that all station buttons follow
     {
         menuStationID = i.id // grabs the current station ID that the machine is wokring on
         let stButton = findStDetails(stationID: (i.id)).1 // grabs the UI button in relation to the station ID
         if buttonTask == 0 //load station data on the right side of the screen
         {
+            if i.stationSizeLvl >= 5 // if station size level is max, then it will max out and stop you from buying the item
+            {
+                sizeButton.isEnabled = false
+                stSizePriceLabel.text = "Max"
+                stSizePriceLabel.isHidden = false
+                i.crowdedness = 0
+            }
+            else
+            {
+                stImproveButton(stClass: i)// if not maxed out, determines if you have enough money to purchase an avaliable upgrade.
+                priceLabel(hidden: false, ID: menuStationID) // updates the price label of the improve station button
+            }
+            if i.stationFacilityLvl >= 5 // if station service level is max, then it will max out and stop you from buying the item, and make UI changes
+            {
+                serviceButton.isEnabled = false
+                stServicePriceLabel.text = "Max"
+                stServicePriceLabel.isHidden = false
+            }
+            else
+            {
+                stImproveButton(stClass: i)// if not maxed out, determines if you have enough money to purchase an avaliable upgrade.
+                priceLabel(hidden: false, ID: menuStationID) // updates the price label of the improve station button
+            }
             starImage(score: i.score) // updates the star image on the screen
-            stImproveButton(stClass: i) //determines if you have enough money to purchase an avaliable upgrade.
-            priceLabel(hidden: false, ID: menuStationID) // updates the price label of the improve station button
             useResourcesVis(hidden: false) // hides gameobjects to avoid bugs
             menuButtonsVis(hidden: true) // hides gameobjects to avoid bugs
-            loadStation(stationID: i.id) // loads a station UI detail on right based on the st id param passed
+            loadStation(stationID: i.id) // loads a station UI detail on right based on the st id param passes
             stationMenuImage.isHidden = false
             enabilityOfStations(stID: i.id, enability: false) // disables the current station button so you cannot press it again and break the game
             stButton?.isEnabled = false // disables the current button so that you cannot press it again (double check)

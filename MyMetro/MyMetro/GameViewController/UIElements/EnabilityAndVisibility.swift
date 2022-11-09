@@ -51,10 +51,10 @@ extension GameViewController // GameObjectEnabilityAndVisibility
         stationUICrowdDensity.isHidden = hidden
     }
 
-    func findStDetails(stationID: Int) -> (newStation, Optional<UIButton>, Optional<UIImageView>)  // uses the station id (int) to return station details, ie: station image, station class, station button
+    func findStDetails(stationID: Int) -> (stationClass, Optional<UIButton>, Optional<UIImageView>)  // uses the station id (int) to return station details, ie: station image, station class, station button
     {
         // -- default data --
-        var classVar = newStation.st_central
+        var classVar = stationClass.st_central
         var labelVar = CentralButtonOutlet
         var imageVar = HungHomImage
         
@@ -63,49 +63,49 @@ extension GameViewController // GameObjectEnabilityAndVisibility
         case 0: // Reset UI
             print("ERROR: NULL(CASE 0) - NO CLASS - RETURNING ID 1")
         case 1://Admiralty St
-            classVar = newStation.st_admiralty
+            classVar = stationClass.st_admiralty
             labelVar = AdmiraltyButtonOutlet
         case 2:
-            classVar = newStation.st_central
+            classVar = stationClass.st_central
             labelVar = CentralButtonOutlet
         case 3:
-            classVar = newStation.st_hunghom
+            classVar = stationClass.st_hunghom
             labelVar = HungHomButtonOutlet
             imageVar = HungHomImage
         case 4:
-            classVar = newStation.st_chaiwan
+            classVar = stationClass.st_chaiwan
             labelVar = ChaiWanButtonOutlet
             imageVar = ChaiWanImage
         case 5:
-            classVar = newStation.st_taikoo
+            classVar = stationClass.st_taikoo
             labelVar = TaiKooButtonOutlet
             imageVar = TaiKooImage
         case 6:
-            classVar = newStation.st_causewaybay
+            classVar = stationClass.st_causewaybay
             labelVar = CausewayBayButtonOutlet
             imageVar = CausewayBayImage
         case 7:
-            classVar = newStation.st_wongchukhang
+            classVar = stationClass.st_wongchukhang
             labelVar = WongChukHangButtonOutlet
             imageVar = WongChukHangImage
         case 8:
-            classVar = newStation.st_hku
+            classVar = stationClass.st_hku
             labelVar = HKUButtonOutlet
             imageVar = HKUImage
         case 9:
-            classVar = newStation.st_kowloon
+            classVar = stationClass.st_kowloon
             labelVar = KowloonButtonOutlet
             imageVar = KowloonImage
         case 10:
-            classVar = newStation.st_tst
+            classVar = stationClass.st_tst
             labelVar = TSTButtonOutlet
             imageVar = TSTImage
         case 11:
-            classVar = newStation.st_austin
+            classVar = stationClass.st_austin
             labelVar = AustinButtonOutlet
             imageVar = AustinImage
         case 12:
-            classVar = newStation.st_whampoa
+            classVar = stationClass.st_whampoa
             labelVar = WhampoaButtonOutlet
             imageVar = WhampoaImage
         
@@ -168,19 +168,19 @@ extension GameViewController // GameObjectEnabilityAndVisibility
         }
         if money >= trainPrice
         {
-            UIbuyTrainButton.isEnabled = true
+            uiBuyTrainButton.isEnabled = true
         }
         if money >= cartPrice
         {
-            UIbuyCartButton.isEnabled = true
+            uiBuyCartButton.isEnabled = true
         }
         if money >= tunnelPrice
         {
-            UIBuyTunnelButton.isEnabled = true
+            uiBuyTunnelButton.isEnabled = true
         }
-        UIbuyCartButton.isHidden = hiddenVar
-        UIBuyTunnelButton.isHidden = hiddenVar
-        UIbuyTrainButton.isHidden = hiddenVar
+        uiBuyCartButton.isHidden = hiddenVar
+        uiBuyTunnelButton.isHidden = hiddenVar
+        uiBuyTrainButton.isHidden = hiddenVar
         shopImage.isHidden = hiddenVar
         shopExitOutlet.isHidden = hiddenVar
     }
@@ -227,7 +227,7 @@ extension GameViewController // GameObjectEnabilityAndVisibility
         serviceButton.isEnabled = true
     }
     
-    func stImproveButton(stClass: newStation) // checks if you have enough money to buy the improvements, to avoid bugs
+    func stImproveButton(stClass: stationClass) // checks if you have enough money to buy the improvements, to avoid bugs
     {
         // below is simple if statement conditions to determine if you have enough money to buy the upgrades
         if money <= (200 * stClass.stationFacilityLvl)

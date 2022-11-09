@@ -79,8 +79,8 @@ extension GameViewController
         
     // -- UI updates --
         money = money + income
-        UImoneyLabel.text = String(money)
-        UIIncomeLabel.text = "+\(income)"
-        UIIncomeLabel.isHidden = false
+        uiMoneyLabel.text = String(money)
+        uiIncomeLabel.text = "+\(income)"
+        uiIncomeLabel.isHidden = false
     }
 }

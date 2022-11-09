@@ -12,7 +12,7 @@ extension GameViewController // this file adds a new line
 {
     
     // the code below will help determine which color is pressed when determining which line color will be used to draw the line
-    @IBAction func GreenColorLine(_ sender: Any)
+    @IBAction func greenColorLine(_ sender: Any)
     {
         GameViewController.newColorLine = UIColor.green // changes the color selected to that later on the machine knows which color you selected
         GameViewController.newColorLineString = "Green"
@@ -20,7 +20,7 @@ extension GameViewController // this file adds a new line
         colorSelected = true
         addStationVisibility(x: false, phase : 2) // enters the 2nd phase of line drawing
     }
-    @IBAction func RedColorLine(_ sender: Any)
+    @IBAction func redColorLine(_ sender: Any)
     {
         GameViewController.newColorLine = UIColor.red
         GameViewController.newColorLineString = "Red"
@@ -28,7 +28,7 @@ extension GameViewController // this file adds a new line
         colorSelected = true
         addStationVisibility(x: false, phase : 2)
     }
-    @IBAction func BlueColorLine(_ sender: Any) // make a function for this later
+    @IBAction func blueColorLine(_ sender: Any) // make a function for this later
     {
         GameViewController.newColorLine = UIColor.blue
         GameViewController.newColorLineString = "Blue"
@@ -36,7 +36,7 @@ extension GameViewController // this file adds a new line
         colorSelected = true
         addStationVisibility(x: false, phase : 2)
     }
-    @IBAction func YellowColorLine(_ sender: Any)
+    @IBAction func yellowColorLine(_ sender: Any)
     {
         GameViewController.newColorLine = UIColor.yellow
         GameViewController.newColorLineString = "Yellow"
@@ -125,8 +125,8 @@ extension GameViewController // this file adds a new line
     {
         //money management
         money -= 100
-        UImoneyLabel.text = String(money)
-        UItunnelLabel.text = String(tunnelNum)
+        uiMoneyLabel.text = String(money)
+        uiTunnelLabel.text = String(tunnelNum)
     }
     
     func checkForTunnel() -> Bool

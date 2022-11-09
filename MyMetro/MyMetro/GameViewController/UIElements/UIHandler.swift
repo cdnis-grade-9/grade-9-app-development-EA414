@@ -10,7 +10,7 @@ import UIKit
 
 extension GameViewController //this file manages the UI underneath
 {
-    @IBAction func SpeedButton(_ sender: Any)
+    @IBAction func speedButton(_ sender: Any)
     {
         currentSpeedRound += 1 // changes the current speed round
         if currentSpeedRound == 1 // normal time, and changes the time by 1.3 time / sec
@@ -34,10 +34,10 @@ extension GameViewController //this file manages the UI underneath
     func updateResourceUI()
     {
         // updates UI labels
-        UImoneyLabel.text = String(money)
-        UIcartNumLabel.text = String(cartNum)
-        UItrainNumLabel.text = String(trainNum)
-        UItunnelLabel.text = String(tunnelNum)
+        uiMoneyLabel.text = String(money)
+        uiCartNumLabel.text = String(cartNum)
+        uiTrainNumLabel.text = String(trainNum)
+        uiTunnelLabel.text = String(tunnelNum)
     }
     
     func updateStars() // updates the final company rating on the bottom of the screen with the 5 stars

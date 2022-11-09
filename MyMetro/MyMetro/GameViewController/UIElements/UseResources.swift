@@ -117,21 +117,22 @@ extension GameViewController
     
     @IBAction func useTrainButton(_ sender: Any)
     {
-        updateLineCrowdedData() // changes the line crowdedness data
+       
         trainNum -= 1 // decreases current number of trains
         useResourcesCheck() // check resources to see if you have any left
         updateResourceUI()  // changes the labels on the bottom of the screen
         changeLine(chg: 5) // changes the line density by -5
+        updateLineCrowdedData() // changes the line crowdedness data
     }
     
     @IBAction func useCartButton(_ sender: Any)
     {
         // same as the above
-        updateLineCrowdedData()
         cartNum -= 1
         useResourcesCheck()
         updateResourceUI()
         changeLine(chg: 1)
+        updateLineCrowdedData()
     }
     
     func useResourcesCheck()
@@ -153,17 +154,18 @@ extension GameViewController
         if currentEditingLine == "Red"
         {
             redSubtractor += chg
-            lineUpgProgBar.progress = Float(blueStationsID.count - blueSubtractor)/10
+            lineUpgProgBar.progress = Float(redStationsID.count - redSubtractor)/10
         }
         else if currentEditingLine == "Blue"
         {
             blueSubtractor += chg
-            lineUpgProgBar.progress = Float(greenStationsID.count - greenSubtractor)/10
+            lineUpgProgBar.progress = Float(blueStationsID.count - blueSubtractor)/10
         }
         else if currentEditingLine == "Green"
         {
             greenSubtractor += chg
-            lineUpgProgBar.progress = Float(redStationsID.count - redSubtractor)/10
+
+            lineUpgProgBar.progress = Float(greenStationsID.count - greenSubtractor)/10
         }
         else if currentEditingLine == "Yellow"
         {

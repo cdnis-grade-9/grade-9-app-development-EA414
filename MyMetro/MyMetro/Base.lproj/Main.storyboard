@@ -237,7 +237,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title=""/>
                                 <connections>
-                                    <action selector="SpeedButton:" destination="b2U-11-Zpq" eventType="touchUpInside" id="6De-Xi-yUG"/>
+                                    <action selector="speedButton:" destination="b2U-11-Zpq" eventType="touchUpInside" id="yfs-3j-Gp2"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="twM-5K-UQB" userLabel="AdmiraltyButton">
@@ -484,7 +484,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title=""/>
                                 <connections>
-                                    <action selector="BlueColorLine:" destination="b2U-11-Zpq" eventType="touchUpInside" id="Sb3-EY-Dp6"/>
+                                    <action selector="blueColorLine:" destination="b2U-11-Zpq" eventType="touchUpInside" id="Teu-R0-zkW"/>
                                 </connections>
                             </button>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fKO-3o-MaI">
@@ -494,7 +494,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title=""/>
                                 <connections>
-                                    <action selector="RedColorLine:" destination="b2U-11-Zpq" eventType="touchUpInside" id="i4t-vF-HXX"/>
+                                    <action selector="redColorLine:" destination="b2U-11-Zpq" eventType="touchUpInside" id="zV6-sk-vac"/>
                                 </connections>
                             </button>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ti5-qL-6sS">
@@ -504,9 +504,6 @@
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title=""/>
-                                <connections>
-                                    <action selector="YellowColorLine:" destination="b2U-11-Zpq" eventType="touchUpInside" id="toA-hm-StL"/>
-                                </connections>
                             </button>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r0w-Ed-pc8">
                                 <rect key="frame" x="758" y="69" width="34" height="33"/>
@@ -515,7 +512,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title=""/>
                                 <connections>
-                                    <action selector="GreenColorLine:" destination="b2U-11-Zpq" eventType="touchUpInside" id="6cv-Ml-cFw"/>
+                                    <action selector="greenColorLine:" destination="b2U-11-Zpq" eventType="touchUpInside" id="8GV-QZ-nBf"/>
                                 </connections>
                             </button>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="-FromStation-" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wrx-sm-9dI">
@@ -792,15 +789,7 @@
                         <outlet property="TSTImage" destination="Bfk-fV-fpE" id="X2i-cs-hs5"/>
                         <outlet property="TaiKooButtonOutlet" destination="m7M-Uz-8K6" id="59W-te-hV5"/>
                         <outlet property="TaiKooImage" destination="giA-Ly-hCO" id="cGo-s9-VKa"/>
-                        <outlet property="UIBuyTunnelButton" destination="3M4-wy-NEg" id="suA-3Z-Fve"/>
-                        <outlet property="UIIncomeLabel" destination="ZWZ-JU-zy9" id="9va-uS-ISY"/>
-                        <outlet property="UIbuyCartButton" destination="Pam-iP-RcD" id="CxF-mP-ZnV"/>
-                        <outlet property="UIbuyTrainButton" destination="4ai-I9-VNH" id="GcS-ni-XTn"/>
-                        <outlet property="UIcartNumLabel" destination="rJG-QR-YrK" id="xA2-9e-pzU"/>
-                        <outlet property="UImoneyLabel" destination="nPz-d4-SvP" id="dEz-aZ-0uN"/>
                         <outlet property="UIresourceButton" destination="wgd-Hi-7cJ" id="7Ge-8N-SVU"/>
-                        <outlet property="UItrainNumLabel" destination="kQX-RR-Zkd" id="Jmd-mc-FiK"/>
-                        <outlet property="UItunnelLabel" destination="nCa-r7-9hb" id="yUe-aH-laV"/>
                         <outlet property="WhampoaButtonOutlet" destination="gi2-97-DXy" id="Ilw-MX-9wr"/>
                         <outlet property="WhampoaImage" destination="LV9-63-eGT" id="31b-iC-4lF"/>
                         <outlet property="WongChukHangButtonOutlet" destination="Wz1-4W-5oJ" id="Gw2-JB-Ozc"/>
@@ -851,6 +840,14 @@
                         <outlet property="stationUIYellowButton" destination="ti5-qL-6sS" id="t9V-bI-8Oo"/>
                         <outlet property="timeBar" destination="CWI-xI-S23" id="cdC-6B-RG2"/>
                         <outlet property="toStationLabelDiff" destination="Ipt-jb-Hdh" id="GFQ-OH-OmD"/>
+                        <outlet property="uiBuyCartButton" destination="Pam-iP-RcD" id="CxF-mP-ZnV"/>
+                        <outlet property="uiBuyTrainButton" destination="4ai-I9-VNH" id="GcS-ni-XTn"/>
+                        <outlet property="uiBuyTunnelButton" destination="3M4-wy-NEg" id="suA-3Z-Fve"/>
+                        <outlet property="uiCartNumLabel" destination="rJG-QR-YrK" id="xA2-9e-pzU"/>
+                        <outlet property="uiIncomeLabel" destination="ZWZ-JU-zy9" id="9va-uS-ISY"/>
+                        <outlet property="uiMoneyLabel" destination="nPz-d4-SvP" id="dEz-aZ-0uN"/>
+                        <outlet property="uiTrainNumLabel" destination="kQX-RR-Zkd" id="Jmd-mc-FiK"/>
+                        <outlet property="uiTunnelLabel" destination="nCa-r7-9hb" id="yUe-aH-laV"/>
                         <outlet property="upgColorLabel" destination="lSx-Ft-YsD" id="nxr-jC-bPx"/>
                         <outlet property="useCartButton" destination="YeK-mh-jyV" id="hh1-WG-IDw"/>
                         <outlet property="useTrainButton" destination="cLl-zB-WcO" id="aJ9-1V-8jG"/>
